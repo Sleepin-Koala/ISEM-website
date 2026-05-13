@@ -422,7 +422,7 @@ function Footer() {
       <div className="footer-four" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }}>
         <div>
           <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "1.2rem" }}>GL<span style={{ color: C.blueBr }}>&</span>IA</div>
-          <p style={{ fontSize: ".875rem", color: C.gray, lineHeight: 1.7, marginTop: ".75rem", maxWidth: 280 }}>Filière Génie Logiciel & Intelligence Artificielle — Former les architectes du numérique de demain. Université [Nom], Abidjan.</p>
+          <p style={{ fontSize: ".875rem", color: C.gray, lineHeight: 1.7, marginTop: ".75rem", maxWidth: 280 }}>Filière Big Data & Actuariat — Former les architectes du numérique de demain. Université INPHB, Yamoussoukro.</p>
           <div style={{ display: "flex", gap: ".75rem", marginTop: "1.25rem" }}>
             {["in","gh","tw","yt"].map(s => <a key={s} href="#" className="social-el">{s}</a>)}
           </div>

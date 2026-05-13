@@ -30,8 +30,8 @@ export default function Contact() {
   const methods = [
     { icon:"✉️", label:"Email professionnel", value:"isem.genies@universite.edu.ci" },
     { icon:"📞", label:"Téléphone", value:"+225 07 89 25 07 19" },
-    { icon:"📍", label:"Localisation", value:"INPHB · Abidjan, Côte d'Ivoire" },
-    { icon:"🔗", label:"LinkedIn", value:"est ce que inp a linkedin" },
+    { icon:"📍", label:"Localisation", value:"INPHB · Yamoussoukro, Côte d'Ivoire" },
+    // { icon:"🔗", label:"LinkedIn", value:"est ce que inp a linkedin" },
   ];
 
   const SectionTag = ({ children }) => (
