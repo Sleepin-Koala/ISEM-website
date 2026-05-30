@@ -272,15 +272,7 @@ body {@apply bg-bg}
 
 
 /* ===== FOOTER ===== */
-footer {
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-  padding: 3rem 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative; z-index: 2;
-}
+
 .footer-logo .mark {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
@@ -300,9 +292,7 @@ footer {
   color: var(--color-dim);
   text-align: center;
 }
-.footer-links {
-  display: flex; gap: 2rem;
-}
+
 .footer-links a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.58rem;

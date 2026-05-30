@@ -133,9 +133,6 @@ function Why(){
 }
 
 function Skills(){
-
-
-  
   return(
   <section className="bg-bg p-10" id = "skills">
     <div className="section-label">Spécialisations</div>
@@ -389,15 +386,16 @@ function Contact(){
 function Footer(){
 
   return(
-  <footer>
-    <div className="footer-logo">
+  <footer className="flex flex-col z-2 items-center gap-7 border-t-border bg-bg md:flex-row p-3" >
+    
+    <div className="footer-logo flex flex-col justify-center items-center">
       <div className="mark">ISEM</div>
       <div className="sub">Ingénierie en Sciences Exactes &amp; Modélisation</div>
     </div>
     <div className="footer-copy">
       <p>© 2026 ISEM — Yamoussoukro, Côte d'Ivoire</p>
     </div>
-    <div className="footer-links">
+    <div className="flex footer-links gap-1">
       <a href="#">Programme</a>
       <a href="#">Contact</a>
     </div>
