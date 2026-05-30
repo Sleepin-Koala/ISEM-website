@@ -1,44 +1,42 @@
 import { useEffect } from "react";
 import {  FaLocationArrow, FaPhone,FaMailBulk, FaBrain, FaSquare,
           FaDatabase ,FaEye , FaPooStorm , FaMicrochip , FaGlobe , FaMoneyBill} from "react-icons/fa";
-import {FaHandHoldingHand ,FaRocket ,FaRobot, FaChartBar , FaNoteSticky, FaBezierCurve} from "react-icons/fa6" 
+import {FaRocket ,FaRobot, FaChartBar , FaNoteSticky, FaBezierCurve} from "react-icons/fa6" 
 
 
 function Hero(){
 
   return(
-    <section className="relative min-h-screen ground hero">
-      <div className="hero-bg"></div>
+    <section className="ground relative flex items-center p-16 min-h-screen">
+      <div className="ground inset-0 -z-1 absolute"></div>
       <div className="hero-grid-lines"></div>
 
-      <div className="hero-left">
-        <div className="anim-fadeUp hero-left">
-          <h1 className="text-white mb-[1.8rem] text-5xl hero-title">
+      <div className="pt-20">
+        <div className="hero-left">
+          <h1 className="text-white mb-[1.8rem] text-5xl">
             Comprendre le monde
-            <p className="text-cyan-400 hero-desc">par les modèles.</p>
+            <p className="text-cyan-400">par les modèles.</p>
           </h1>
 
-          <p className="text-off max-w-[480px] mb-[3rem]">
+          <p className="text-off max-w-120 mb-12">
           ISEM forme une nouvelle génération d'ingénieurs scientifiques — mathématiciens, modélisateurs, architectes de données — capables de raisonner avec rigueur sur les systèmes complexes du monde réel.
           </p>
 
-          <div className="flex gap-2 flex-wrap hero-actions">
-            <a href="#foundations" className="uppercase cursor-none transition-all relative font-bold px-2 py-3 bg-amber">Découvrir le programme</a>
+          <div className="flex gap-2 flex-wrap">
+            <a href="#foundations" className="uppercase transition-all relative font-bold px-2 py-3 bg-amber">Découvrir le programme</a>
             <a href="#skills" className="px-2 py-3 font-semibold uppercase transition-all border border-[rgba(240,242,245,0.2)] text-white tracking-widest bg-transparent hover:border-cyan-600 hover:text-cyan-600">Explorer les spécialisations</a>
           </div>
-
-          
         </div>
       </div>
 
-      <div className="hero-right">
-        <canvas id="hero-canvas"></canvas>
-        <div className="hero-equations" id="heroEq"></div>
+      <div className="flex items-center justify-center">
+        {/* <canvas id="hero-canvas"></canvas> */}
+        {/* <div className="hero-equations" id="heroEq"></div> */}
       </div>
 
-      <div className="scroll-hint">
-        <span>Explorer</span>
-        <div className="scroll-line"></div>
+      <div className="absolute hidden md:flex flex-col items-center gap-2 opacity-40  bottom-3 left-1/2">
+        <span className="uppercase text-amber tracking-widest text-xs">Explorer</span>
+        <div className="scroll-line w-px h-14 animate-bounce"></div>
       </div>
 
     </section>
@@ -47,34 +45,33 @@ function Hero(){
 
 function Nav(){
   return(
-    <nav className="flex flex-col md:flex-row items-center justify-between gap-4 px-4 md:px-8 lg:px-16">
-      <a href="#" className="nav-logo">
-        <span className="mark">ISEM</span>
-        <span className="sub">Sciences Exactes &amp; Modélisation</span>
+    <nav className="flex md:flex-row items-center justify-between gap-4 px-4 md:px-8 lg:px-16">
+      <a href="#" className="flex gap-0 flex-col">
+        <span className="text-2xl font-extrabold text-white tracking-widest font-['Syne', sans-serif]">ISEM</span>
+        <span className="uppercase text-amber text-xs tracking-widest">Sciences Exactes &amp; Modélisation</span>
       </a>
-      <ul className="nav-links hidden md:flex gap-6">
+      <ul className="hidden md:flex gap-6 nav-links">
         <li><a href="#foundations">Programme</a></li>
         <li><a href="#skills">Spécialisations</a></li>
         {/* <li><a href="#encadreurs">Encadreurs</a></li> */}
         <li><a href="#contact">Contact</a></li>
-      </ul>
-      {/* <button className="nav-cta w-full md:w-auto">ESPACE ETUDIANT</button> */}
+      </ul> 
+      {/* <button className="bg-transparent border-amber px-2 py-3 text-amber text-xs font-bold trancking-widest uppercase hover:bg-amber hover:text-bg hidden md:flex">Boite a Idee</button> */}
     </nav>
   )
 }
 
 function Bar(){
-
   return(
   <section id="foundations">
-    <div className="section-label">Socle scientifique</div>
-    <h2 className="section-title reveal">
+    <div className="tracking-wide uppercase flex items-center gap-2">Socle scientifique</div>
+    <h2 className="font-bold text-base text-xl">
       <p>Une formation <em>généraliste</em></p>
       <p>d'excellence scientifique</p>
     </h2>
     <p className="section-body reveal">Avant toute spécialisation, ISEM construit des fondations solides : la capacité à abstraire, modéliser, prouver, calculer, optimiser. Chaque ingénieur ISEM pense comme un scientifique.</p>
 
-    <div className="foundations-grid reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+    {/* <div className="foundations-grid reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
       <div className="foundations-pillars grid grid-cols-1 sm:grid-cols-2 gap-px">
         <div className="pillar"><div className="pillar-num">01</div><div className="pillar-name">Mathématiques</div><div className="pillar-desc">Analyse, algèbre linéaire, topologie, théorie de la mesure.</div></div>
         <div className="pillar"><div className="pillar-num">02</div><div className="pillar-name">Probabilités &amp; Stats</div><div className="pillar-desc">Inférence bayésienne, processus stochastiques, théorie des valeurs extrêmes.</div></div>
@@ -87,7 +84,7 @@ function Bar(){
       <div className="foundations-visual h-64 md:h-96">
         <canvas id="foundations-canvas"></canvas>
       </div>
-    </div>
+    </div>  sup */} 
   </section>
   )
 }
@@ -95,11 +92,11 @@ function Bar(){
 function Why(){
 
   return(
-  <section id="why">
+  <section className="bg-bg2 border-t-border border-b-border p-5" id="foundations">
     <div className="section-label">Pourquoi ISEM</div>
-    <h2 className="section-title reveal">Ingénierie de la <em>complexité</em></h2>
+    <div className="section-title text-white">Ingénierie de la complexité</div>
 
-    <div className="why-grid reveal">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5  mt-11">
       <div className="why-card">
         <div className="why-icon">∑</div>
         <h3>Rigueur mathématique</h3>
@@ -137,17 +134,21 @@ function Why(){
 
 function Skills(){
 
-  return(
-  <section id="skills">
-    <div className="section-label">Spécialisations</div>
-    <h2 className="section-title reveal">Deux voies d'<em>excellence</em></h2>
-    <p className="section-body reveal">Après les fondations communes, chaque étudiant approfondit une spécialisation. Un tronc scientifique partagé. Une expertise distincte.</p>
 
-    <div className="skills-tabs">
+  
+  return(
+  <section className="bg-bg p-10" id = "skills">
+    <div className="section-label">Spécialisations</div>
+    <h2 className="section-title">Deux voies d'<em>excellence</em></h2>
+    <p className="section-body">Après les fondations communes, chaque étudiant approfondit une spécialisation. Un tronc scientifique partagé. Une expertise distincte.</p>
+
+    <div className="flex gap-0 border-border justify-between mt-8">
       <button className="skills-tab active" data-tab="general">Général ( Tronc Commun ) </button>
       <button className="skills-tab" data-tab="ia">IA &amp; Data Science</button>
       <button className="skills-tab" data-tab="actuariat">Actuariat &amp; Finance</button>
     </div>
+    
+    
 
     {/* <!-- GENERAL TAB --> */}
     <div className="skills-panel active" id="panel-general">
@@ -161,6 +162,7 @@ function Skills(){
         <div className="skill-card"><span className="skill-icon">σ</span><div className="skill-name">Statistique Inférentielle</div><div className="skill-desc">Estimation, tests, intervalles de confiance, modèles de régression et sélection de modèles.</div><span className="skill-tag">Statistiques</span></div>
         <div className="skill-card"><span className="skill-icon">λ</span><div className="skill-name">Théorie des Graphes</div><div className="skill-desc">Algorithmes sur les graphes, réseaux complexes, applications aux systèmes réels.</div><span className="skill-tag">Algorithmique</span></div>
       </div>
+
       <div className="skills-apps">
         <div className="skills-apps-label">Applications réelles</div>
         <div className="skills-apps-list">
@@ -227,71 +229,71 @@ function Skills(){
   )
 }
 
-function Prof(){
+// function Prof(){
 
-  const encadreurs = [
-    {
-      avatar: "DK",
-      nom: "Dr. Diallo Kouyaté",
-      domain: "Probabilités &amp; Finance Math.",
-      profession: "Doctorat en mathématiques appliquées. Spécialiste des processus stochastiques et de la modélisation financière. Ancien consultant en gestion des risques.",
-      works: ["Processus de Lévy en finance islamique" , "Modèles de risque de crédit pour marchés émergents" , "Publication : Journal of Mathematical Finance, 2023"]
-    },
-    {
-      avatar: "AN",
-      nom: "Aissatou N'Diaye",
-      domain: "Machine Learning &amp; IA",
-      profession: "MSc en Data Science (Paris-Saclay). Expérience en MLOps et déploiement de modèles à grande échelle. Chercheuse associée en apprentissage automatique.",
-      works: ["Architecture transformer pour séries temporelles" , "IA appliquée à l'agriculture de précision" , "Top 5 — NeurIPS Africa Workshop 2024"]
-    }
-  ]
-
-
-  return(
-  <section id="encadreurs">
-    <div className="section-label">Corps pédagogique</div>
-    <h2 className="section-title reveal">Encadrés par des <em>experts</em></h2>
-    <p className="section-body reveal">Chercheurs, praticiens et ingénieurs de terrain — chaque encadreur apporte une vision rigoureuse et ancrée dans la réalité des problèmes contemporains.</p>
-
-    <div className="encadreurs-grid reveal">
-
-      {encadreurs.map((person)=>(
-        <div className="encadreur-card">
-            <div className="flex items-center gap-[1rem] mb-[1rem]">
-               <div className="encadreur-avatar">{person.avatar}</div>
-                <div>
-                  <div className="encadreur-name">{person.nom}</div>
-                  <div className="encadreur-title">{person.domain}</div>
-                </div>
-            </div>
-            <div className="encadreur-exp">{person.profession}</div>
-
-        </div>
-      ))}
-
-      {/* <!-- Card 1 --> */}
-      {/* <div className="encadreur-card">
-        <div className="flex items-center gap-[1rem] mb-[1rem]">
-          <div className="encadreur-avatar">DK</div>
-          <div>
-            <div className="encadreur-name">Dr. Diallo Kouyaté</div>
-            <div className="encadreur-title">Probabilités &amp; Finance Math.</div>
-          </div>
-        </div>
-        <div className="encadreur-exp">Doctorat en mathématiques appliquées. Spécialiste des processus stochastiques et de la modélisation financière. Ancien consultant en gestion des risques.</div>
-        <div className="encadreur-hover">
-          <div className="hover-label">Expertise &amp; Travaux</div>
-          <div className="hover-item">Processus de Lévy en finance islamique</div>
-          <div className="hover-item">Modèles de risque de crédit pour marchés émergents</div>
-          <div className="hover-item">Publication : Journal of Mathematical Finance, 2023</div>
-        </div>
-      </div> */}
+//   const encadreurs = [
+//     {
+//       avatar: "DK",
+//       nom: "Dr. Diallo Kouyaté",
+//       domain: "Probabilités &amp; Finance Math.",
+//       profession: "Doctorat en mathématiques appliquées. Spécialiste des processus stochastiques et de la modélisation financière. Ancien consultant en gestion des risques.",
+//       works: ["Processus de Lévy en finance islamique" , "Modèles de risque de crédit pour marchés émergents" , "Publication : Journal of Mathematical Finance, 2023"]
+//     },
+//     {
+//       avatar: "AN",
+//       nom: "Aissatou N'Diaye",
+//       domain: "Machine Learning &amp; IA",
+//       profession: "MSc en Data Science (Paris-Saclay). Expérience en MLOps et déploiement de modèles à grande échelle. Chercheuse associée en apprentissage automatique.",
+//       works: ["Architecture transformer pour séries temporelles" , "IA appliquée à l'agriculture de précision" , "Top 5 — NeurIPS Africa Workshop 2024"]
+//     }
+//   ]
 
 
-    </div>
-  </section>
-  )
-}
+//   return(
+//   <section id="encadreurs">
+//     <div className="section-label">Corps pédagogique</div>
+//     <h2 className="section-title reveal">Encadrés par des <em>experts</em></h2>
+//     <p className="section-body reveal">Chercheurs, praticiens et ingénieurs de terrain — chaque encadreur apporte une vision rigoureuse et ancrée dans la réalité des problèmes contemporains.</p>
+
+//     <div className="encadreurs-grid reveal">
+
+//       {encadreurs.map((person)=>(
+//         <div className="encadreur-card">
+//             <div className="flex items-center gap-[1rem] mb-[1rem]">
+//                <div className="encadreur-avatar">{person.avatar}</div>
+//                 <div>
+//                   <div className="encadreur-name">{person.nom}</div>
+//                   <div className="encadreur-title">{person.domain}</div>
+//                 </div>
+//             </div>
+//             <div className="encadreur-exp">{person.profession}</div>
+
+//         </div>
+//       ))}
+
+//       {/* <!-- Card 1 --> */}
+//       {/* <div className="encadreur-card">
+//         <div className="flex items-center gap-[1rem] mb-[1rem]">
+//           <div className="encadreur-avatar">DK</div>
+//           <div>
+//             <div className="encadreur-name">Dr. Diallo Kouyaté</div>
+//             <div className="encadreur-title">Probabilités &amp; Finance Math.</div>
+//           </div>
+//         </div>
+//         <div className="encadreur-exp">Doctorat en mathématiques appliquées. Spécialiste des processus stochastiques et de la modélisation financière. Ancien consultant en gestion des risques.</div>
+//         <div className="encadreur-hover">
+//           <div className="hover-label">Expertise &amp; Travaux</div>
+//           <div className="hover-item">Processus de Lévy en finance islamique</div>
+//           <div className="hover-item">Modèles de risque de crédit pour marchés émergents</div>
+//           <div className="hover-item">Publication : Journal of Mathematical Finance, 2023</div>
+//         </div>
+//       </div> */}
+
+
+//     </div>
+//   </section>
+//   )
+// }
 
 // function Vision(){
 //   return(
@@ -326,10 +328,10 @@ function Prof(){
 
 function Contact(){
   return(
-  <section id="contact">
+  <section id="contact" className="p-10">
     <div className="section-label">Contact</div>
-    <div className="contact-inner">
-      <div className="contact-info reveal">
+    <div className="flex flex-col justify-between md:flex-row">
+      <div className="contact-info">
         <h2>Travaillez avec Nous</h2>
         <div className="contact-methods">
           <a href="mailto:contact@isem.edu" className="contact-method">
@@ -344,14 +346,10 @@ function Contact(){
             <FaLocationArrow className="method-icon"/>
             <div><div className="method-label">Localisation</div><div className="method-val">Yamoussoukro, Côte d'Ivoire</div></div>
           </a>
-          {/* <a href="#" className="contact-method">
-            <FaHandHoldingHand className="method-icon"/>
-            <div><div className="method-label">Partenariats</div><div className="method-val">partenariats@isem.edu</div></div>
-          </a> */}
         </div>
       </div>
 
-      <div className="contact-form reveal">
+      <div className="contact-form">
         <div className="form-row">
           <div className="form-group">
             <label className="form-label">Prénom</label>
@@ -382,6 +380,7 @@ function Contact(){
         </div>
         <button className="form-submit">Envoyer le message</button>
       </div>
+
     </div>
   </section>
   )
@@ -417,261 +416,238 @@ export default function Home(){
           document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
           document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
           tab.classList.add('active');
+          console.log(document.getElementById('panel-' + tab.dataset.tab))
           document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
         });
       });
     }
 
-    function cursor(){
-      const cursor = document.getElementById('cursor');
-      const ring = document.getElementById('cursorRing');
-      let mx = 0, my = 0, rx = 0, ry = 0;
-      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
 
-      (function animCursor(){
-        rx += (mx - rx) * 0.14;
-        ry += (my - ry) * 0.14;
-        cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
-        ring.style.left  = rx + 'px'; ring.style.top  = ry + 'px';
-        requestAnimationFrame(animCursor);
-      })();
+  //   function marque(){
+  //     const items = ['Mathématiques','Modélisation','Intelligence Artificielle','Data Science','Actuariat','Finance Quantitative','Optimisation','Calcul Scientifique','Systèmes Complexes','Statistiques','Algorithmes','Probabilités'];
+  //     const track = document.getElementById('marqueeTrack');
+  //     [...items,...items,...items].forEach(t => {
+  //       const el = document.createElement('span');
+  //       el.className = 'marquee-item text-xs md:text-sm'; el.textContent = t;
+  //       track.appendChild(el);
+  //     });
+  //   }
 
-      document.querySelectorAll('a, button, .pillar, .why-card, .skill-card, .encadreur-card').forEach(el => {
-        el.addEventListener('mouseenter', () => { cursor.style.width = '16px'; cursor.style.height = '16px'; ring.style.width = '52px'; ring.style.height = '52px'; ring.style.borderColor = 'rgba(245,158,63,0.7)'; });
-        el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '36px'; ring.style.height = '36px'; ring.style.borderColor = 'rgba(79,195,247,0.5)'; });
-      });
-    }
+  //   function observer(){
+  //     const observer = new IntersectionObserver(entries => {
+  //         entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+  //       }, { threshold: 0.1 });
+  //       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  //   }
 
-    function marque(){
-      const items = ['Mathématiques','Modélisation','Intelligence Artificielle','Data Science','Actuariat','Finance Quantitative','Optimisation','Calcul Scientifique','Systèmes Complexes','Statistiques','Algorithmes','Probabilités'];
-      const track = document.getElementById('marqueeTrack');
-      [...items,...items,...items].forEach(t => {
-        const el = document.createElement('span');
-        el.className = 'marquee-item text-xs md:text-sm'; el.textContent = t;
-        track.appendChild(el);
-      });
-    }
+  //   (function(){
+  //   const c = document.getElementById('hero-canvas');
+  //   const ctx = c.getContext('2d');
+  //   let W, H, nodes = [], t = 0;
 
-    function observer(){
-      const observer = new IntersectionObserver(entries => {
-          entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    }
+  //   function resize(){
+  //     W = c.offsetWidth; H = c.offsetHeight;
+  //     c.width = W * devicePixelRatio; c.height = H * devicePixelRatio;
+  //     ctx.scale(devicePixelRatio, devicePixelRatio);
+  //   }
 
-    (function(){
-    const c = document.getElementById('hero-canvas');
-    const ctx = c.getContext('2d');
-    let W, H, nodes = [], t = 0;
+  //   function makeNodes(n){
+  //     nodes = [];
+  //     for(let i=0;i<n;i++){
+  //       nodes.push({
+  //         x: Math.random()*W, y: Math.random()*H,
+  //         vx: (Math.random()-0.5)*0.25, vy: (Math.random()-0.5)*0.25,
+  //         r: 1.5 + Math.random()*2.5,
+  //         pulse: Math.random()*Math.PI*2,
+  //         color: Math.random() > 0.7 ? 'amber' : 'cyan'
+  //       });
+  //     }
+  //   }
 
-    function resize(){
-      W = c.offsetWidth; H = c.offsetHeight;
-      c.width = W * devicePixelRatio; c.height = H * devicePixelRatio;
-      ctx.scale(devicePixelRatio, devicePixelRatio);
-    }
+  //   function draw(){
+  //     ctx.clearRect(0,0,W,H);
+  //     t += 0.006;
 
-    function makeNodes(n){
-      nodes = [];
-      for(let i=0;i<n;i++){
-        nodes.push({
-          x: Math.random()*W, y: Math.random()*H,
-          vx: (Math.random()-0.5)*0.25, vy: (Math.random()-0.5)*0.25,
-          r: 1.5 + Math.random()*2.5,
-          pulse: Math.random()*Math.PI*2,
-          color: Math.random() > 0.7 ? 'amber' : 'cyan'
-        });
-      }
-    }
+  //     // Draw connections
+  //     for(let i=0;i<nodes.length;i++){
+  //       for(let j=i+1;j<nodes.length;j++){
+  //         const dx = nodes[i].x - nodes[j].x;
+  //         const dy = nodes[i].y - nodes[j].y;
+  //         const dist = Math.sqrt(dx*dx+dy*dy);
+  //         if(dist < 120){
+  //           const alpha = (1 - dist/120) * 0.25;
+  //           const grad = ctx.createLinearGradient(nodes[i].x,nodes[i].y,nodes[j].x,nodes[j].y);
+  //           grad.addColorStop(0, `rgba(79,195,247,${alpha})`);
+  //           grad.addColorStop(1, `rgba(245,158,63,${alpha*0.5})`);
+  //           ctx.beginPath();
+  //           ctx.strokeStyle = grad;
+  //           ctx.lineWidth = 0.6;
+  //           ctx.moveTo(nodes[i].x,nodes[i].y);
+  //           ctx.lineTo(nodes[j].x,nodes[j].y);
+  //           ctx.stroke();
+  //         }
+  //       }
+  //     }
 
-    function draw(){
-      ctx.clearRect(0,0,W,H);
-      t += 0.006;
+  //     // Draw nodes
+  //     nodes.forEach(n => {
+  //       n.x += n.vx; n.y += n.vy;
+  //       if(n.x<0||n.x>W) n.vx*=-1;
+  //       if(n.y<0||n.y>H) n.vy*=-1;
+  //       const p = Math.sin(t + n.pulse);
+  //       const rad = n.r * (1 + 0.3*p);
+  //       const alpha = 0.5 + 0.3*p;
+  //       const col = n.color === 'amber' ? `rgba(245,158,63,${alpha})` : `rgba(79,195,247,${alpha})`;
+  //       ctx.beginPath();
+  //       ctx.arc(n.x,n.y,rad,0,Math.PI*2);
+  //       ctx.fillStyle = col;
+  //       ctx.fill();
+  //       // glow
+  //       const grd = ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,rad*6);
+  //       grd.addColorStop(0, n.color === 'amber' ? `rgba(245,158,63,0.12)` : `rgba(79,195,247,0.1)`);
+  //       grd.addColorStop(1, 'transparent');
+  //       ctx.beginPath();
+  //       ctx.arc(n.x,n.y,rad*6,0,Math.PI*2);
+  //       ctx.fillStyle = grd;
+  //       ctx.fill();
+  //     });
 
-      // Draw connections
-      for(let i=0;i<nodes.length;i++){
-        for(let j=i+1;j<nodes.length;j++){
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
-          const dist = Math.sqrt(dx*dx+dy*dy);
-          if(dist < 120){
-            const alpha = (1 - dist/120) * 0.25;
-            const grad = ctx.createLinearGradient(nodes[i].x,nodes[i].y,nodes[j].x,nodes[j].y);
-            grad.addColorStop(0, `rgba(79,195,247,${alpha})`);
-            grad.addColorStop(1, `rgba(245,158,63,${alpha*0.5})`);
-            ctx.beginPath();
-            ctx.strokeStyle = grad;
-            ctx.lineWidth = 0.6;
-            ctx.moveTo(nodes[i].x,nodes[i].y);
-            ctx.lineTo(nodes[j].x,nodes[j].y);
-            ctx.stroke();
-          }
-        }
-      }
+  //     // Probability distribution curve
+  //     ctx.beginPath();
+  //     ctx.strokeStyle = 'rgba(245,158,63,0.18)';
+  //     ctx.lineWidth = 1.5;
+  //     const mu = W*0.5, sig = W*0.15;
+  //     for(let x=0;x<W;x++){
+  //       const gauss = Math.exp(-0.5*((x-mu)/sig)**2) / (sig*Math.sqrt(2*Math.PI));
+  //       const y = H*0.78 - gauss * sig * H * 0.6;
+  //       if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+  //     }
+  //     ctx.stroke();
 
-      // Draw nodes
-      nodes.forEach(n => {
-        n.x += n.vx; n.y += n.vy;
-        if(n.x<0||n.x>W) n.vx*=-1;
-        if(n.y<0||n.y>H) n.vy*=-1;
-        const p = Math.sin(t + n.pulse);
-        const rad = n.r * (1 + 0.3*p);
-        const alpha = 0.5 + 0.3*p;
-        const col = n.color === 'amber' ? `rgba(245,158,63,${alpha})` : `rgba(79,195,247,${alpha})`;
-        ctx.beginPath();
-        ctx.arc(n.x,n.y,rad,0,Math.PI*2);
-        ctx.fillStyle = col;
-        ctx.fill();
-        // glow
-        const grd = ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,rad*6);
-        grd.addColorStop(0, n.color === 'amber' ? `rgba(245,158,63,0.12)` : `rgba(79,195,247,0.1)`);
-        grd.addColorStop(1, 'transparent');
-        ctx.beginPath();
-        ctx.arc(n.x,n.y,rad*6,0,Math.PI*2);
-        ctx.fillStyle = grd;
-        ctx.fill();
-      });
+  //     // Secondary shifted curve
+  //     ctx.beginPath();
+  //     ctx.strokeStyle = 'rgba(79,195,247,0.1)';
+  //     ctx.lineWidth = 1;
+  //     const mu2 = W*0.35, sig2 = W*0.1;
+  //     for(let x=0;x<W;x++){
+  //       const gauss = Math.exp(-0.5*((x-mu2)/sig2)**2) / (sig2*Math.sqrt(2*Math.PI));
+  //       const y = H*0.78 - gauss * sig2 * H * 0.5;
+  //       if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+  //     }
+  //     ctx.stroke();
 
-      // Probability distribution curve
-      ctx.beginPath();
-      ctx.strokeStyle = 'rgba(245,158,63,0.18)';
-      ctx.lineWidth = 1.5;
-      const mu = W*0.5, sig = W*0.15;
-      for(let x=0;x<W;x++){
-        const gauss = Math.exp(-0.5*((x-mu)/sig)**2) / (sig*Math.sqrt(2*Math.PI));
-        const y = H*0.78 - gauss * sig * H * 0.6;
-        if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-      }
-      ctx.stroke();
+  //     requestAnimationFrame(draw);
+  //   }
 
-      // Secondary shifted curve
-      ctx.beginPath();
-      ctx.strokeStyle = 'rgba(79,195,247,0.1)';
-      ctx.lineWidth = 1;
-      const mu2 = W*0.35, sig2 = W*0.1;
-      for(let x=0;x<W;x++){
-        const gauss = Math.exp(-0.5*((x-mu2)/sig2)**2) / (sig2*Math.sqrt(2*Math.PI));
-        const y = H*0.78 - gauss * sig2 * H * 0.5;
-        if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-      }
-      ctx.stroke();
+  //   resize();
+  //   makeNodes(55);
+  //   draw();
+  //   window.addEventListener('resize', () => { resize(); makeNodes(55); });
+  //   })();
 
-      requestAnimationFrame(draw);
-    }
+  //   (function(){
+  // const c = document.getElementById('foundations-canvas');
+  // if(!c) return;
+  // const ctx = c.getContext('2d');
+  // let W, H, t = 0;
 
-    resize();
-    makeNodes(55);
-    draw();
-    window.addEventListener('resize', () => { resize(); makeNodes(55); });
-    })();
+  // function resize(){
+  //   W = c.offsetWidth || 400; H = c.offsetHeight || 480;
+  //   c.width = W*devicePixelRatio; c.height = H*devicePixelRatio;
+  //   ctx.scale(devicePixelRatio, devicePixelRatio);
+  // }
 
-    (function(){
-  const c = document.getElementById('foundations-canvas');
-  if(!c) return;
-  const ctx = c.getContext('2d');
-  let W, H, t = 0;
+  // const pillars = [
+  //   {label:'∑ Maths', angle:0,      r:0.38},
+  //   {label:'σ Stats', angle:Math.PI*2/6,  r:0.34},
+  //   {label:'∂ EDO',   angle:Math.PI*4/6,  r:0.36},
+  //   {label:'∇ Opti',  angle:Math.PI*6/6,  r:0.35},
+  //   {label:'λ Algo',  angle:Math.PI*8/6,  r:0.36},
+  //   {label:'⊕ Info',  angle:Math.PI*10/6, r:0.34},
+  // ];
 
-  function resize(){
-    W = c.offsetWidth || 400; H = c.offsetHeight || 480;
-    c.width = W*devicePixelRatio; c.height = H*devicePixelRatio;
-    ctx.scale(devicePixelRatio, devicePixelRatio);
-  }
+  // function draw(){
+  //   ctx.clearRect(0,0,W,H);
+  //   t += 0.004;
+  //   const cx = W/2, cy = H/2;
 
-  const pillars = [
-    {label:'∑ Maths', angle:0,      r:0.38},
-    {label:'σ Stats', angle:Math.PI*2/6,  r:0.34},
-    {label:'∂ EDO',   angle:Math.PI*4/6,  r:0.36},
-    {label:'∇ Opti',  angle:Math.PI*6/6,  r:0.35},
-    {label:'λ Algo',  angle:Math.PI*8/6,  r:0.36},
-    {label:'⊕ Info',  angle:Math.PI*10/6, r:0.34},
-  ];
+  //   // Central glow
+  //   const g = ctx.createRadialGradient(cx,cy,0,cx,cy,80);
+  //   g.addColorStop(0,'rgba(245,158,63,0.12)');
+  //   g.addColorStop(1,'transparent');
+  //   ctx.beginPath(); ctx.arc(cx,cy,80,0,Math.PI*2);
+  //   ctx.fillStyle = g; ctx.fill();
 
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    t += 0.004;
-    const cx = W/2, cy = H/2;
+  //   // Center circle
+  //   ctx.beginPath(); ctx.arc(cx,cy,18,0,Math.PI*2);
+  //   ctx.strokeStyle='rgba(245,158,63,0.5)'; ctx.lineWidth=1; ctx.stroke();
+  //   ctx.fillStyle='rgba(245,158,63,0.08)'; ctx.fill();
 
-    // Central glow
-    const g = ctx.createRadialGradient(cx,cy,0,cx,cy,80);
-    g.addColorStop(0,'rgba(245,158,63,0.12)');
-    g.addColorStop(1,'transparent');
-    ctx.beginPath(); ctx.arc(cx,cy,80,0,Math.PI*2);
-    ctx.fillStyle = g; ctx.fill();
+  //   // Orbit ring
+  //   ctx.beginPath(); ctx.arc(cx,cy,Math.min(W,H)*0.36,0,Math.PI*2);
+  //   ctx.strokeStyle='rgba(79,195,247,0.07)'; ctx.lineWidth=1;
+  //   ctx.setLineDash([4,8]); ctx.stroke(); ctx.setLineDash([]);
 
-    // Center circle
-    ctx.beginPath(); ctx.arc(cx,cy,18,0,Math.PI*2);
-    ctx.strokeStyle='rgba(245,158,63,0.5)'; ctx.lineWidth=1; ctx.stroke();
-    ctx.fillStyle='rgba(245,158,63,0.08)'; ctx.fill();
+  //   pillars.forEach((p, i) => {
+  //     const a = p.angle + t * (i%2===0?1:-0.7);
+  //     const rad = Math.min(W,H) * p.r;
+  //     const px = cx + Math.cos(a)*rad;
+  //     const py = cy + Math.sin(a)*rad;
 
-    // Orbit ring
-    ctx.beginPath(); ctx.arc(cx,cy,Math.min(W,H)*0.36,0,Math.PI*2);
-    ctx.strokeStyle='rgba(79,195,247,0.07)'; ctx.lineWidth=1;
-    ctx.setLineDash([4,8]); ctx.stroke(); ctx.setLineDash([]);
+  //     // Connection line to center
+  //     const grad = ctx.createLinearGradient(cx,cy,px,py);
+  //     grad.addColorStop(0,'rgba(245,158,63,0.3)');
+  //     grad.addColorStop(1,'rgba(79,195,247,0.1)');
+  //     ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(px,py);
+  //     ctx.strokeStyle=grad; ctx.lineWidth=0.8; ctx.stroke();
 
-    pillars.forEach((p, i) => {
-      const a = p.angle + t * (i%2===0?1:-0.7);
-      const rad = Math.min(W,H) * p.r;
-      const px = cx + Math.cos(a)*rad;
-      const py = cy + Math.sin(a)*rad;
+  //     // Node
+  //     ctx.beginPath(); ctx.arc(px,py,6,0,Math.PI*2);
+  //     ctx.fillStyle='rgba(79,195,247,0.6)'; ctx.fill();
+  //     const ng = ctx.createRadialGradient(px,py,0,px,py,20);
+  //     ng.addColorStop(0,'rgba(79,195,247,0.15)');
+  //     ng.addColorStop(1,'transparent');
+  //     ctx.beginPath(); ctx.arc(px,py,20,0,Math.PI*2);
+  //     ctx.fillStyle=ng; ctx.fill();
 
-      // Connection line to center
-      const grad = ctx.createLinearGradient(cx,cy,px,py);
-      grad.addColorStop(0,'rgba(245,158,63,0.3)');
-      grad.addColorStop(1,'rgba(79,195,247,0.1)');
-      ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(px,py);
-      ctx.strokeStyle=grad; ctx.lineWidth=0.8; ctx.stroke();
+  //     // Label
+  //     ctx.font = '600 11px Syne, sans-serif';
+  //     ctx.fillStyle='rgba(240,242,245,0.7)';
+  //     ctx.textAlign='center'; ctx.textBaseline='middle';
+  //     const lx = cx + Math.cos(a)*(rad+28);
+  //     const ly = cy + Math.sin(a)*(rad+20);
+  //     ctx.fillText(p.label, lx, ly);
+  //   });
 
-      // Node
-      ctx.beginPath(); ctx.arc(px,py,6,0,Math.PI*2);
-      ctx.fillStyle='rgba(79,195,247,0.6)'; ctx.fill();
-      const ng = ctx.createRadialGradient(px,py,0,px,py,20);
-      ng.addColorStop(0,'rgba(79,195,247,0.15)');
-      ng.addColorStop(1,'transparent');
-      ctx.beginPath(); ctx.arc(px,py,20,0,Math.PI*2);
-      ctx.fillStyle=ng; ctx.fill();
+  //   // ISEM center label
+  //   ctx.font = 'bold 12px Syne, sans-serif';
+  //   ctx.fillStyle='rgba(245,158,63,0.9)';
+  //   ctx.textAlign='center'; ctx.textBaseline='middle';
+  //   ctx.fillText('ISEM', cx, cy);
 
-      // Label
-      ctx.font = '600 11px Syne, sans-serif';
-      ctx.fillStyle='rgba(240,242,245,0.7)';
-      ctx.textAlign='center'; ctx.textBaseline='middle';
-      const lx = cx + Math.cos(a)*(rad+28);
-      const ly = cy + Math.sin(a)*(rad+20);
-      ctx.fillText(p.label, lx, ly);
-    });
+  //   requestAnimationFrame(draw);
+  // }
 
-    // ISEM center label
-    ctx.font = 'bold 12px Syne, sans-serif';
-    ctx.fillStyle='rgba(245,158,63,0.9)';
-    ctx.textAlign='center'; ctx.textBaseline='middle';
-    ctx.fillText('ISEM', cx, cy);
-
-    requestAnimationFrame(draw);
-  }
-
-  resize(); draw();
-  window.addEventListener('resize', resize);
-    })();
+  // resize(); draw();
+  // window.addEventListener('resize', resize);
+  //   })();
 
     tabs()
-    cursor()
-    marque()
-    observer()
+  //   marque()
+  //   observer()
 
   } , [])
 
   return(
     <>
-    <div className="cursor" id="cursor"></div>
-    <div className="cursor-ring" id="cursorRing"></div>
-
     <Nav/>
     <Hero/>
-    
-    {/* ===== MARQUEE =====  */}
-    <div className="marquee-bar">
+      
+    {/* <div className="marquee-bar">
       <div className="marquee-track" id="marqueeTrack"></div>
-    </div>
+    </div> */}
 
-    <Bar/>
+    {/* <Bar/> */}
     <Why/>
     <Skills/>
     {/* <Prof/> */}
