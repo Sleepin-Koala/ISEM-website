@@ -1,0 +1,77 @@
+html {scroll-behavior: smooth;}
+
+/* tailwind.css / index.css */
+
+/* ① TAILWIND APPREND LES NOMS — une seule fois, valeurs dark par défaut */
+@import "tailwindcss";
+
+@theme {
+  --color-bg:        #05070f;
+  --color-bg2:       #080c18;
+  --color-bg3:       #0b1020;
+  --color-navy:      #0d1530;
+  --color-cyan:      #4fc3f7;
+  --color-cyan-dim:  #1e4a6e;
+  --color-amber:     #f59e3f;
+  --color-amber-dim: #7a4a10;
+  --color-white:     #f0f2f5;
+  --color-off:       #8a9ab8;
+  --color-dim:       #3a4a6e;
+  --color-border:    rgba(74,130,180,0.15);
+}
+
+/* ② LES SÉLECTEURS ÉCRASENT au runtime — Tailwind lit la var, le browser la remplace */
+
+html.dark {
+  --color-bg:        #05070f;
+  --color-bg2:       #080c18;
+  --color-bg3:       #0b1020;
+  --color-navy:      #0d1530;
+  --color-cyan:      #4fc3f7;
+  --color-cyan-dim:  #1e4a6e;
+  --color-amber:     #f59e3f;
+  --color-amber-dim: #7a4a10;
+  --color-white:     #f0f2f5;
+  --color-off:       #8a9ab8;
+  --color-dim:       #3a4a6e;
+  --color-border:    rgba(74,130,180,0.15);
+
+  color: var(--color-white);
+  background: var(--color-bg);
+}
+
+html.light {
+  --color-bg:        #f5f4f0;
+  --color-bg2:       #eceae4;
+  --color-bg3:       #e2e0d8;
+  --color-navy:      #d6d4cc;
+  --color-cyan:      #1a4a8a;
+  --color-cyan-dim:  #d0d8e8;
+  --color-amber:     #c8410a;
+  --color-amber-dim: #f0c8b0;
+  --color-white:     #0d0e12;
+  --color-off:       #4a4e5c;
+  --color-dim:       #9a9ea8;
+  --color-border:    rgba(0,0,0,0.10);
+
+  color: var(--color-white);
+  background: var(--color-bg);
+}
+
+html.custom {
+  --color-bg:        #0e0c08;
+  --color-bg2:       #141009;
+  --color-bg3:       #1c1610;
+  --color-navy:      #241e16;
+  --color-cyan:      #a03020;
+  --color-cyan-dim:  #3a1810;
+  --color-amber:     #d4a030;
+  --color-amber-dim: #5a3c10;
+  --color-white:     #f5f0e8;
+  --color-off:       #9a8e7a;
+  --color-dim:       #4a3e2e;
+  --color-border:    rgba(212,160,48,0.15);
+
+  color: var(--color-white);
+  background: var(--color-bg);
+}

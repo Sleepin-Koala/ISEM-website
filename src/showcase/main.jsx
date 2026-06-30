@@ -1,14 +1,19 @@
 import { useEffect } from "react";
 import {  FaLocationArrow, FaPhone,FaMailBulk, FaBrain, FaSquare,
-          FaDatabase ,FaEye , FaPooStorm , FaMicrochip , FaGlobe , FaMoneyBill} from "react-icons/fa";
-import {FaRocket ,FaRobot, FaChartBar , FaNoteSticky, FaBezierCurve} from "react-icons/fa6" 
+          FaDatabase ,FaEye , FaPooStorm , FaMicrochip , FaGlobe , 
+          FaMoneyBill , FaCalculator , FaShieldAlt , FaProjectDiagram , FaWaveSquare}  from "react-icons/fa";
+import {FaRocket ,FaRobot, FaChartBar , FaBezierCurve} from "react-icons/fa6" 
+import Nav from "./Nav"
+import Footer from "./Footer"
 
 
 function Hero(){
 
   return(
-    <section className="ground relative flex items-center p-16 min-h-screen">
-      <div className="ground inset-0 -z-1 absolute"></div>
+    <section className="
+    ground
+    relative flex items-center p-16 min-h-screen">
+      <div className=" inset-0 -z-1 absolute"></div>
       <div className="hero-grid-lines"></div>
 
       <div className="pt-20">
@@ -43,23 +48,7 @@ function Hero(){
   )
 }
 
-function Nav(){
-  return(
-    <nav className="flex md:flex-row items-center justify-between gap-4 px-4 md:px-8 lg:px-16">
-      <a href="#" className="flex gap-0 flex-col">
-        <span className="text-2xl font-extrabold text-white tracking-widest font-['Syne', sans-serif]">ISEM</span>
-        <span className="uppercase text-amber text-xs tracking-widest">Sciences Exactes &amp; Modélisation</span>
-      </a>
-      <ul className="hidden md:flex gap-6 nav-links">
-        <li><a href="#foundations">Programme</a></li>
-        <li><a href="#skills">Spécialisations</a></li>
-        {/* <li><a href="#encadreurs">Encadreurs</a></li> */}
-        <li><a href="#contact">Contact</a></li>
-      </ul> 
-      {/* <button className="bg-transparent border-amber px-2 py-3 text-amber text-xs font-bold trancking-widest uppercase hover:bg-amber hover:text-bg hidden md:flex">Boite a Idee</button> */}
-    </nav>
-  )
-}
+
 
 function Bar(){
   return(
@@ -140,9 +129,9 @@ function Skills(){
     <p className="section-body">Après les fondations communes, chaque étudiant approfondit une spécialisation. Un tronc scientifique partagé. Une expertise distincte.</p>
 
     <div className="flex gap-0 border-border justify-between mt-8">
-      <button className="skills-tab active" data-tab="general">Général ( Tronc Commun ) </button>
-      <button className="skills-tab" data-tab="ia">IA &amp; Data Science</button>
-      <button className="skills-tab" data-tab="actuariat">Actuariat &amp; Finance</button>
+      <button className="skills-tab active cursor-pointer" data-tab="general">Général ( Tronc Commun ) </button>
+      <button className="skills-tab cursor-pointer" data-tab="ia">IA &amp; Data Science</button>
+      <button className="skills-tab cursor-pointer" data-tab="actuariat">Actuariat &amp; Finance</button>
     </div>
     
     
@@ -201,11 +190,11 @@ function Skills(){
     {/* <!-- ACTUARIAT TAB --> */}
     <div className="skills-panel" id="panel-actuariat">
       <div className="skills-cards">
-        <div className="skill-card"><span className="skill-icon">⚖</span><div className="skill-name">Modélisation du Risque</div><div className="skill-desc">Mesures de risque, VaR, CVaR, stress testing, modèles de défaut.</div><span className="skill-tag">Risk</span></div>
+        <div className="skill-card"><FaShieldAlt className="skill-icon"/><div className="skill-name">Modélisation du Risque</div><div className="skill-desc">Mesures de risque, VaR, CVaR, stress testing, modèles de défaut.</div><span className="skill-tag">Risk</span></div>
         <div className="skill-card"><FaMoneyBill className="skill-icon"/><div className="skill-name">Finance Quantitative</div><div className="skill-desc">Pricing d'options, modèles de Black-Scholes, taux d'intérêt, gestion de portefeuille.</div><span className="skill-tag">Finance</span></div>
-        <div className="skill-card"><FaNoteSticky className="skill-icon"/><div className="skill-name">Mathématiques Actuarielles</div><div className="skill-desc">Tables de mortalité, provisionnement, tarification vie et non-vie.</div><span className="skill-tag">Assurance</span></div>
-        <div className="skill-card"><span className="skill-icon">〰</span><div className="skill-name">Processus Stochastiques</div><div className="skill-desc">Mouvement brownien, processus de Poisson, équations différentielles stochastiques.</div><span className="skill-tag">Stochastique</span></div>
-        <div className="skill-card"><span className="skill-icon">🏗</span><div className="skill-name">Ingénierie Financière</div><div className="skill-desc">Structuration de produits dérivés, couverture (hedging), gestion actif-passif.</div><span className="skill-tag">Structuration</span></div>
+        <div className="skill-card"><FaCalculator className="skill-icon"/><div className="skill-name">Mathématiques Actuarielles</div><div className="skill-desc">Tables de mortalité, provisionnement, tarification vie et non-vie.</div><span className="skill-tag">Assurance</span></div>
+        <div className="skill-card"><FaWaveSquare className="skill-icon"/><div className="skill-name">Processus Stochastiques</div><div className="skill-desc">Mouvement brownien, processus de Poisson, équations différentielles stochastiques.</div><span className="skill-tag">Stochastique</span></div>
+        <div className="skill-card"><FaProjectDiagram className="skill-icon"/><div className="skill-name">Ingénierie Financière</div><div className="skill-desc">Structuration de produits dérivés, couverture (hedging), gestion actif-passif.</div><span className="skill-tag">Structuration</span></div>
         <div className="skill-card"><FaBezierCurve className="skill-icon"/><div className="skill-name">Prévision &amp; Séries Temp.</div><div className="skill-desc">ARIMA, GARCH, modèles état-espace, prévision économétrique.</div><span className="skill-tag">Forecasting</span></div>
         <div className="skill-card"><FaSquare className="skill-icon"/><div className="skill-name">Modélisation Statistique</div><div className="skill-desc">GLM, modèles mixtes, copules, simulation de Monte Carlo en assurance.</div><span className="skill-tag">Statistiques</span></div>
         <div className="skill-card"><FaGlobe className="skill-icon"/><div className="skill-name">Risque Systémique</div><div className="skill-desc">Contagion financière, réseaux bancaires, régulation prudentielle (Solvency II, Bâle III).</div><span className="skill-tag">Systémique</span></div>
@@ -375,7 +364,7 @@ function Contact(){
           <label className="form-label">Message</label>
           <textarea className="form-textarea" placeholder="Décrivez votre parcours, votre motivation, votre projet..."></textarea>
         </div>
-        <button className="form-submit">Envoyer le message</button>
+        <button className="bg-amber text-bg border-none font-extrabold text-xs tracking-widest uppercase px-4 py-5 transition duration-500 hover:text-white ">Envoyer le message</button>
       </div>
 
     </div>
@@ -383,25 +372,7 @@ function Contact(){
   )
 }
 
-function Footer(){
 
-  return(
-  <footer className="flex flex-col z-2 items-center gap-7 border-t-border bg-bg md:flex-row p-3" >
-    
-    <div className="footer-logo flex flex-col justify-center items-center">
-      <div className="mark">ISEM</div>
-      <div className="sub">Ingénierie en Sciences Exactes &amp; Modélisation</div>
-    </div>
-    <div className="footer-copy">
-      <p>© 2026 ISEM — Yamoussoukro, Côte d'Ivoire</p>
-    </div>
-    <div className="flex footer-links gap-1">
-      <a href="#">Programme</a>
-      <a href="#">Contact</a>
-    </div>
-  </footer>
-  )
-}
 
 
 export default function Home(){
@@ -420,230 +391,13 @@ export default function Home(){
       });
     }
 
-
-  //   function marque(){
-  //     const items = ['Mathématiques','Modélisation','Intelligence Artificielle','Data Science','Actuariat','Finance Quantitative','Optimisation','Calcul Scientifique','Systèmes Complexes','Statistiques','Algorithmes','Probabilités'];
-  //     const track = document.getElementById('marqueeTrack');
-  //     [...items,...items,...items].forEach(t => {
-  //       const el = document.createElement('span');
-  //       el.className = 'marquee-item text-xs md:text-sm'; el.textContent = t;
-  //       track.appendChild(el);
-  //     });
-  //   }
-
-  //   function observer(){
-  //     const observer = new IntersectionObserver(entries => {
-  //         entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
-  //       }, { threshold: 0.1 });
-  //       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  //   }
-
-  //   (function(){
-  //   const c = document.getElementById('hero-canvas');
-  //   const ctx = c.getContext('2d');
-  //   let W, H, nodes = [], t = 0;
-
-  //   function resize(){
-  //     W = c.offsetWidth; H = c.offsetHeight;
-  //     c.width = W * devicePixelRatio; c.height = H * devicePixelRatio;
-  //     ctx.scale(devicePixelRatio, devicePixelRatio);
-  //   }
-
-  //   function makeNodes(n){
-  //     nodes = [];
-  //     for(let i=0;i<n;i++){
-  //       nodes.push({
-  //         x: Math.random()*W, y: Math.random()*H,
-  //         vx: (Math.random()-0.5)*0.25, vy: (Math.random()-0.5)*0.25,
-  //         r: 1.5 + Math.random()*2.5,
-  //         pulse: Math.random()*Math.PI*2,
-  //         color: Math.random() > 0.7 ? 'amber' : 'cyan'
-  //       });
-  //     }
-  //   }
-
-  //   function draw(){
-  //     ctx.clearRect(0,0,W,H);
-  //     t += 0.006;
-
-  //     // Draw connections
-  //     for(let i=0;i<nodes.length;i++){
-  //       for(let j=i+1;j<nodes.length;j++){
-  //         const dx = nodes[i].x - nodes[j].x;
-  //         const dy = nodes[i].y - nodes[j].y;
-  //         const dist = Math.sqrt(dx*dx+dy*dy);
-  //         if(dist < 120){
-  //           const alpha = (1 - dist/120) * 0.25;
-  //           const grad = ctx.createLinearGradient(nodes[i].x,nodes[i].y,nodes[j].x,nodes[j].y);
-  //           grad.addColorStop(0, `rgba(79,195,247,${alpha})`);
-  //           grad.addColorStop(1, `rgba(245,158,63,${alpha*0.5})`);
-  //           ctx.beginPath();
-  //           ctx.strokeStyle = grad;
-  //           ctx.lineWidth = 0.6;
-  //           ctx.moveTo(nodes[i].x,nodes[i].y);
-  //           ctx.lineTo(nodes[j].x,nodes[j].y);
-  //           ctx.stroke();
-  //         }
-  //       }
-  //     }
-
-  //     // Draw nodes
-  //     nodes.forEach(n => {
-  //       n.x += n.vx; n.y += n.vy;
-  //       if(n.x<0||n.x>W) n.vx*=-1;
-  //       if(n.y<0||n.y>H) n.vy*=-1;
-  //       const p = Math.sin(t + n.pulse);
-  //       const rad = n.r * (1 + 0.3*p);
-  //       const alpha = 0.5 + 0.3*p;
-  //       const col = n.color === 'amber' ? `rgba(245,158,63,${alpha})` : `rgba(79,195,247,${alpha})`;
-  //       ctx.beginPath();
-  //       ctx.arc(n.x,n.y,rad,0,Math.PI*2);
-  //       ctx.fillStyle = col;
-  //       ctx.fill();
-  //       // glow
-  //       const grd = ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,rad*6);
-  //       grd.addColorStop(0, n.color === 'amber' ? `rgba(245,158,63,0.12)` : `rgba(79,195,247,0.1)`);
-  //       grd.addColorStop(1, 'transparent');
-  //       ctx.beginPath();
-  //       ctx.arc(n.x,n.y,rad*6,0,Math.PI*2);
-  //       ctx.fillStyle = grd;
-  //       ctx.fill();
-  //     });
-
-  //     // Probability distribution curve
-  //     ctx.beginPath();
-  //     ctx.strokeStyle = 'rgba(245,158,63,0.18)';
-  //     ctx.lineWidth = 1.5;
-  //     const mu = W*0.5, sig = W*0.15;
-  //     for(let x=0;x<W;x++){
-  //       const gauss = Math.exp(-0.5*((x-mu)/sig)**2) / (sig*Math.sqrt(2*Math.PI));
-  //       const y = H*0.78 - gauss * sig * H * 0.6;
-  //       if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-  //     }
-  //     ctx.stroke();
-
-  //     // Secondary shifted curve
-  //     ctx.beginPath();
-  //     ctx.strokeStyle = 'rgba(79,195,247,0.1)';
-  //     ctx.lineWidth = 1;
-  //     const mu2 = W*0.35, sig2 = W*0.1;
-  //     for(let x=0;x<W;x++){
-  //       const gauss = Math.exp(-0.5*((x-mu2)/sig2)**2) / (sig2*Math.sqrt(2*Math.PI));
-  //       const y = H*0.78 - gauss * sig2 * H * 0.5;
-  //       if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-  //     }
-  //     ctx.stroke();
-
-  //     requestAnimationFrame(draw);
-  //   }
-
-  //   resize();
-  //   makeNodes(55);
-  //   draw();
-  //   window.addEventListener('resize', () => { resize(); makeNodes(55); });
-  //   })();
-
-  //   (function(){
-  // const c = document.getElementById('foundations-canvas');
-  // if(!c) return;
-  // const ctx = c.getContext('2d');
-  // let W, H, t = 0;
-
-  // function resize(){
-  //   W = c.offsetWidth || 400; H = c.offsetHeight || 480;
-  //   c.width = W*devicePixelRatio; c.height = H*devicePixelRatio;
-  //   ctx.scale(devicePixelRatio, devicePixelRatio);
-  // }
-
-  // const pillars = [
-  //   {label:'∑ Maths', angle:0,      r:0.38},
-  //   {label:'σ Stats', angle:Math.PI*2/6,  r:0.34},
-  //   {label:'∂ EDO',   angle:Math.PI*4/6,  r:0.36},
-  //   {label:'∇ Opti',  angle:Math.PI*6/6,  r:0.35},
-  //   {label:'λ Algo',  angle:Math.PI*8/6,  r:0.36},
-  //   {label:'⊕ Info',  angle:Math.PI*10/6, r:0.34},
-  // ];
-
-  // function draw(){
-  //   ctx.clearRect(0,0,W,H);
-  //   t += 0.004;
-  //   const cx = W/2, cy = H/2;
-
-  //   // Central glow
-  //   const g = ctx.createRadialGradient(cx,cy,0,cx,cy,80);
-  //   g.addColorStop(0,'rgba(245,158,63,0.12)');
-  //   g.addColorStop(1,'transparent');
-  //   ctx.beginPath(); ctx.arc(cx,cy,80,0,Math.PI*2);
-  //   ctx.fillStyle = g; ctx.fill();
-
-  //   // Center circle
-  //   ctx.beginPath(); ctx.arc(cx,cy,18,0,Math.PI*2);
-  //   ctx.strokeStyle='rgba(245,158,63,0.5)'; ctx.lineWidth=1; ctx.stroke();
-  //   ctx.fillStyle='rgba(245,158,63,0.08)'; ctx.fill();
-
-  //   // Orbit ring
-  //   ctx.beginPath(); ctx.arc(cx,cy,Math.min(W,H)*0.36,0,Math.PI*2);
-  //   ctx.strokeStyle='rgba(79,195,247,0.07)'; ctx.lineWidth=1;
-  //   ctx.setLineDash([4,8]); ctx.stroke(); ctx.setLineDash([]);
-
-  //   pillars.forEach((p, i) => {
-  //     const a = p.angle + t * (i%2===0?1:-0.7);
-  //     const rad = Math.min(W,H) * p.r;
-  //     const px = cx + Math.cos(a)*rad;
-  //     const py = cy + Math.sin(a)*rad;
-
-  //     // Connection line to center
-  //     const grad = ctx.createLinearGradient(cx,cy,px,py);
-  //     grad.addColorStop(0,'rgba(245,158,63,0.3)');
-  //     grad.addColorStop(1,'rgba(79,195,247,0.1)');
-  //     ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(px,py);
-  //     ctx.strokeStyle=grad; ctx.lineWidth=0.8; ctx.stroke();
-
-  //     // Node
-  //     ctx.beginPath(); ctx.arc(px,py,6,0,Math.PI*2);
-  //     ctx.fillStyle='rgba(79,195,247,0.6)'; ctx.fill();
-  //     const ng = ctx.createRadialGradient(px,py,0,px,py,20);
-  //     ng.addColorStop(0,'rgba(79,195,247,0.15)');
-  //     ng.addColorStop(1,'transparent');
-  //     ctx.beginPath(); ctx.arc(px,py,20,0,Math.PI*2);
-  //     ctx.fillStyle=ng; ctx.fill();
-
-  //     // Label
-  //     ctx.font = '600 11px Syne, sans-serif';
-  //     ctx.fillStyle='rgba(240,242,245,0.7)';
-  //     ctx.textAlign='center'; ctx.textBaseline='middle';
-  //     const lx = cx + Math.cos(a)*(rad+28);
-  //     const ly = cy + Math.sin(a)*(rad+20);
-  //     ctx.fillText(p.label, lx, ly);
-  //   });
-
-  //   // ISEM center label
-  //   ctx.font = 'bold 12px Syne, sans-serif';
-  //   ctx.fillStyle='rgba(245,158,63,0.9)';
-  //   ctx.textAlign='center'; ctx.textBaseline='middle';
-  //   ctx.fillText('ISEM', cx, cy);
-
-  //   requestAnimationFrame(draw);
-  // }
-
-  // resize(); draw();
-  // window.addEventListener('resize', resize);
-  //   })();
-
     tabs()
-  //   marque()
-  //   observer()
-
   } , [])
 
   return(
     <>
     <Nav/>
     <Hero/>
-      
-    {/* <div className="marquee-bar">
-      <div className="marquee-track" id="marqueeTrack"></div>
-    </div> */}
 
     {/* <Bar/> */}
     <Why/>

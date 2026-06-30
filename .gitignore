@@ -1,3 +1,5 @@
 /node_modules
-/help
+/src/help
+/src/ideas
+*.zip
 brouillon

@@ -1,32 +1,15 @@
 @import "tailwindcss";
 @import "anim.css";
-/* @import "style.css"; */
+@import "app.css";
 
 .ground {
     background:
-        radial-gradient(ellipse 60% 70% at 75% 50%, rgba(10, 30, 80, 0.6) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245, 158, 63, 0.04) 0%, transparent 60%),
-        linear-gradient(160deg, #05070f 0%, #08101e 50%, #05070f 100%);
+        linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg2) 50%, var(--color-bg) 100%);
 }
 
 
 
-html {scroll-behavior: smooth;}
 
-html.dark {
-
-    color: whitesmoke;
-    @theme {
-        --color-amber: #f59e3f;
-        --color-off: #8a9ab8;
-        --color-bg: #05070f;
-        --color-bg2: #080c18;
-        --color-bg3: #0b1020;
-        --color-navy: #0d1530;
-        --color-border: rgba(74,130,180,0.15);
-
-    }
-}
 
 body {@apply bg-bg}
 
@@ -62,7 +45,7 @@ body {@apply bg-bg}
 .section-body {@apply text-2xl leading-6 text-off max-w-3xl}
 
 .why-card { 
-    @apply p-5 overflow-hidden hover:bg-[rgba(13,21,48,0.95)] transition ease-in-out  
+    @apply p-5 overflow-hidden hover:bg-bg3 transition ease-in-out  
 }
 .why-icon {@apply w-16 h-16 border-border flex items-center justify-center text-2xl}
 .why-card h3 {
@@ -72,13 +55,13 @@ body {@apply bg-bg}
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.9rem;
-  color: var(--white);
+  color: var(--color-white);
 }
 .why-card p {
   font-family: 'Crimson Pro', serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--off);
+  color: var(--color-off);
 }
 
 
@@ -95,6 +78,7 @@ body {@apply bg-bg}
 }
 
 .skills-tab.active {@apply text-white}
+.skills-tab:hover {@apply text-shadow-amber-50}
 
 .skills-cards {
   display: grid;
@@ -109,7 +93,8 @@ body {@apply bg-bg}
 .skills-panel.active { display: block; }
 
 
-.skill-card {@apply bg-bg2 overflow-hidden border-b-border p-8}
+.skill-card {@apply bg-bg2 overflow-hidden border-b-border p-8 hover:bg-bg3}
+
 
 .skill-name {
   font-family: 'Syne', sans-serif;
@@ -130,7 +115,7 @@ body {@apply bg-bg}
   margin-top: 3rem;
   padding: 2rem;
   border: 1px solid var(--color-border);
-  background: rgba(10,20,40,0.4);
+  background: var(--color-bg3);
 }
 .skills-apps-label {
   font-family: 'JetBrains Mono', monospace;
@@ -144,32 +129,15 @@ body {@apply bg-bg}
   display: flex; flex-wrap: wrap; gap: 0.6rem;
 }
 .app-tag {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid var(--color-border);
-  color: var(--color-off);
-  background: rgba(79,195,247,0.03);
-  transition: all 0.3s;
-}
-.app-tag:hover {
-  border-color: var(--color-cyan);
-  color: var(--color-cyan);
+  font-family: 'Syne', sans-serif; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.app-tag {
+  @apply font-semibold tracking-[0.08em] py-2 px-3 
+  text-xs border border-border text-off bg-bg3
+  transition duration-300 hover:border-cyan-300 hover:text-cyan-400
+  cursor-default
+}
 
 
 
@@ -186,12 +154,12 @@ body {@apply bg-bg}
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
-.contact-info h2 em { font-style: italic; color: var(--amber); }
+.contact-info h2 em { font-style: italic; color: var(--color-amber); }
 .contact-info p {
   font-family: 'Crimson Pro', serif;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--off);
+  color: var(--color-off);
   margin-bottom: 2.5rem;
 }
 
@@ -199,20 +167,20 @@ body {@apply bg-bg}
 .contact-method {
   display: flex; align-items: center; gap: 1.2rem;
   padding: 1.2rem 1.5rem;
-  border: 1px solid var(--border);
-  background: rgba(13,21,48,0.3);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg3);
   transition: border-color 0.3s;
   text-decoration: none;
 }
-.contact-method:hover { border-color: var(--cyan); }
+.contact-method:hover { border-color: var(--color-cyan); }
 
-.contact-method:hover { border-color: var(--cyan); }
+.contact-method:hover { border-color: var(--color-cyan); }
 .method-icon { font-size: 1.2rem; flex-shrink: 0; }
 .method-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.58rem;
   letter-spacing: 0.2em;
-  color: var(--dim);
+  color: var(--color-dim);
   text-transform: uppercase;
   margin-bottom: 0.2rem;
 }
@@ -220,7 +188,7 @@ body {@apply bg-bg}
   font-family: 'Syne', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--color-white);
 }
 
 .contact-form {
@@ -233,13 +201,13 @@ body {@apply bg-bg}
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;
   letter-spacing: 0.2em;
-  color: var(--dim);
+  color: var(--color-dim);
   text-transform: uppercase;
 }
 .form-input, .form-select, .form-textarea {
-  background: rgba(13,21,48,0.5);
-  border: 1px solid var(--border);
-  color: var(--white);
+  background: var(--color-bg3);
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
   font-family: 'Syne', sans-serif;
   font-size: 0.85rem;
   padding: 0.9rem 1.2rem;
@@ -249,24 +217,11 @@ body {@apply bg-bg}
   width: 100%;
 }
 .form-input:focus, .form-select:focus, .form-textarea:focus {
-  border-color: var(--cyan);
+  border-color: var(--color-cyan);
 }
 .form-textarea { resize: vertical; min-height: 120px; }
-.form-select option { background: var(--navy); }
-.form-submit {
-  background: var(--amber);
-  color: var(--bg);
-  border: none;
-  padding: 1rem 2.5rem;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  align-self: flex-start;
-}
-.form-submit:hover { background: var(--white); }
+.form-select option { background: var(--color-navy); }
+
 
 
 
