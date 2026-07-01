@@ -9,8 +9,8 @@ export default function Nav({ links }) {
 
 
     useEffect(() => {
-        let state = document.getElementById("drop").style.display
-        state === "none" ? document.getElementById("drop").style.display = "flex" : document.getElementById("drop").style.display = "none"
+        showMore ? document.getElementById("drop").classList.replace("hidden", "flex-col") 
+        : document.getElementById("drop").classList.replace("flex-col", "hidden") 
     }, [showMore])
 
     return (
@@ -22,7 +22,7 @@ export default function Nav({ links }) {
                     <span className="uppercase text-amber text-xs tracking-widest">Sciences Exactes &amp; Modélisation</span>
                 </a>
 
-                <div className="lg:hidden cursor-pointer" id="bar" onClick={() => setShowMore(!showMore)}>
+                <div className="lg:hidden cursor-pointer flex justify-center items-center" id="bar" onClick={() => setShowMore(!showMore)}>
                     {showMore ? <RxCross1 /> : <FaBars />}
                 </div>
 
@@ -34,7 +34,7 @@ export default function Nav({ links }) {
             </div>
 
             <div>
-                <ul className="lg:hidden gap-2 nav-links text-center select-none p-3" style={{ display: "none", flexDirection: "column" }} id="drop">
+                <ul className="hidden lg:hidden gap-2 nav-links text-center select-none p-3" id="drop">
                     {links.map((lk, id) => (
                         <li><a href={lk.href} className={`${lk.classname} cursor-pointer p-3 hover:bg-bg2 flex justify-center`} onClick={lk.onclick}>{lk.text} </a></li>
                     ))}
