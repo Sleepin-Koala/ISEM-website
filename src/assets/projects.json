@@ -5,7 +5,7 @@
     "description": "On a fait un projet qui regroupe les simulations de plusieurs de entité de l'industrie comme les centrales hydroelectriques et autres , on les a regroupé pour faire un logiciel final de simulation ou on peut switcher entre chqaque mini-projet",
     "tags" : ["React" , "Tauri", "Rust" , "Tailwindcss"],
     "auteur" : "Sr",
-    "preview" : "./1.png",
+    "preview" : "./1.webp",
     "link" : "https://github.com/Sleepin-Koala/IsemIndustry"
 },
 {
@@ -13,7 +13,7 @@
     "description": "On a eu l'idee de faire un site web pour faire la promotion et etablir le prestige de notre filiere, le site web est maitrisé et maintenu par nous meme dans chaque aspect aussi minime soit t'il su projet.",
     "tags" : ["React" , "Tailwindcss"],
     "auteur" : "Sr",
-    "preview" : "./2.png",
+    "preview" : "./2.webp",
     "link" : "https://github.com/Sleepin-Koala/ISEM-website/"
 }
 
