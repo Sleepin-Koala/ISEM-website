@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "anim.css";
-@import "app.css";
+@import "theme.css";
+@import "style.css";
 
 .ground {
     background:

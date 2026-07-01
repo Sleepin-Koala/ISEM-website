@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+
+.glass-card {
+    @apply backdrop-blur-xl rounded-xl;
+}
