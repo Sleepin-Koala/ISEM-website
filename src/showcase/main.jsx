@@ -41,7 +41,7 @@ export default function Home() {
         { text: theme === "light" ? <MdOutlineNightlight className="w-6 h-6" /> : <MdOutlineLightMode className="w-6 h-6" />, onclick: toggle }]}
       />
 
-      <Hero />
+      <Hero currentTheme={theme}/>
       <Why />
       <Skills />
       <Contact />

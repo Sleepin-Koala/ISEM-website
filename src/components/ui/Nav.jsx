@@ -14,7 +14,7 @@ export default function Nav({ links }) {
     }, [showMore])
 
     return (
-        <nav className="gap-4 pt-4 px-8 lg:px-16">
+        <nav className="gap-4 pt-4 pb-2 px-8 lg:px-16 w-full top-0 fixed z-10 bg-bg2">
             <div className="flex justify-between">
 
                 <a href="/" className="flex gap-0 flex-col">

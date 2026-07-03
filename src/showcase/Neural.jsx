@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function NeuralNetwork() {
+export default function NeuralNetwork({theme}) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -92,7 +92,7 @@ export default function NeuralNetwork() {
           if (d < MAX_DISTANCE) {
             const opacity = 1 - d / MAX_DISTANCE;
 
-            let color = `rgba(85,217,255,${opacity * 0.3})`;
+            let color = theme === "light" ? `rgba(0,0,0,${opacity * 0.3})` : `rgba(85,217,255,${opacity * 0.3})`;
 
             const mx = (a.x + b.x) / 2;
             const my = (a.y + b.y) / 2;
@@ -100,9 +100,7 @@ export default function NeuralNetwork() {
             const mdx = mouse.x - mx;
             const mdy = mouse.y - my;
 
-            if (Math.sqrt(mdx * mdx + mdy * mdy) < 140) {
-              color = `rgba(255,255,255,${opacity})`;
-            }
+           
 
             ctx.beginPath();
             ctx.strokeStyle = color;

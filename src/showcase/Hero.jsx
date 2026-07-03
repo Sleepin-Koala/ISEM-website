@@ -1,14 +1,15 @@
 import Neural from "./Neural.jsx"
+import { useTheme } from "../components/hooks/useTheme.jsx"
 
 
 
-export default function Hero() {
+export default function Hero({currentTheme}) {
 
   return (
-    <section className="ground relative flex items-center p-16 min-h-screen">
+    <section className="ground flex items-center p-16 min-h-screen">
 
-      <div className="inset-0 absolute opacity-10">
-        <img src="./bg2.png" style={{width: "100%" , height: "100%"}}/>
+      <div className={`inset-0 absolute  ${currentTheme == "light" ? "invert-300 opacity-20" : "opacity-10"}`}>
+        <img src="./bg2.png"  style={{width: "100%" , height: "100%"}}/>
       </div>
 
       <div className="pt-20">
@@ -34,7 +35,7 @@ export default function Hero() {
         <div className="scroll-line w-px h-14 animate-bounce"></div>
       </div>
 
-      <Neural/>
+      <Neural theme={currentTheme}/>
 
     </section>
   )
