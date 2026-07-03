@@ -28,7 +28,7 @@ export default function Nav({ links }) {
 
                 <ul className="hidden lg:flex gap-6 nav-links " >
                     {links.map((lk, id) => (
-                        <li><a href={lk.href} className={`${lk.classname} cursor-pointer`} onClick={lk.onclick}>{lk.text} </a></li>
+                        <li key={id}><a href={lk.href}  className={`${lk.classname} cursor-pointer`} onClick={lk.onclick}>{lk.text} </a></li>
                     ))}
                 </ul>
             </div>
@@ -36,7 +36,7 @@ export default function Nav({ links }) {
             <div>
                 <ul className="hidden lg:hidden gap-2 nav-links text-center select-none p-3" id="drop">
                     {links.map((lk, id) => (
-                        <li><a href={lk.href} className={`${lk.classname} cursor-pointer p-3 hover:bg-bg2 flex justify-center`} onClick={lk.onclick}>{lk.text} </a></li>
+                        <li key={id}><a href={lk.href} className={`${lk.classname} cursor-pointer p-3 hover:bg-bg2 flex justify-center`} onClick={lk.onclick}>{lk.text} </a></li>
                     ))}
                 </ul>
             </div>

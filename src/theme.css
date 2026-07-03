@@ -20,7 +20,6 @@ html {scroll-behavior: smooth;}
   --color-border:    rgba(74,130,180,0.15);
 }
 
-/* ② LES SÉLECTEURS ÉCRASENT au runtime — Tailwind lit la var, le browser la remplace */
 
 html.dark {
   --color-bg:        #05070f;
