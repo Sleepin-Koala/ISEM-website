@@ -21,7 +21,7 @@ export default function Card({ title, description, tags, preview, link }) {
                 </div>
                 <div className="flex justify-center gap-3">
                     {tags.map((element, id) => (
-                        <div key={id} className="p-1 border border-amber rounded-xl text-xs bg-dim/30 min-w-15 text-center">{element}</div>
+                        <div key={id} className="p-1 border border-amber rounded-xl text-xs text-amber bg-dim/30 min-w-15 text-center">{element}</div>
                     ))}
                 </div>
             </div>
