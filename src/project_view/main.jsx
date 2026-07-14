@@ -10,7 +10,7 @@ export default function Projects() {
                 { text: "REVENIR", href: "/" },
             ]} />
 
-            <div className="grid lg:grid-cols-3 gap-3 p-5">
+            <div className="grid lg:mt-15 lg:grid-cols-3 gap-3 p-5">
                 {P.map((el, id) => (
                     <Card title={el.title}
                         key={id}

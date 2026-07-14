@@ -2,7 +2,7 @@
 
 [{
     "title" : "Industry Simulator",
-    "description": "On a fait un projet qui regroupe les simulations de plusieurs de entité de l'industrie comme les centrales hydroelectriques et autres , on les a regroupé pour faire un logiciel final de simulation ou on peut switcher entre chqaque mini-projet",
+    "description": "Nous avons conçu un logiciel de simulation industrielle intégré, capable d'agréger et de modéliser simultanément divers systèmes industriels complexes (comme les centrales hydroélectriques). Ce système unique offre une flexibilité totale, permettant un basculement immédiat entre différents scénarios pour une analyse réaliste.",
     "tags" : ["React" , "Tauri", "Rust" , "Tailwindcss"],
     "auteur" : "Sr",
     "preview" : "./1.webp",
@@ -10,7 +10,7 @@
 },
 {
     "title" : "Ce Site Web",
-    "description": "On a eu l'idee de faire un site web pour faire la promotion et etablir le prestige de notre filiere, le site web est maitrisé et maintenu par nous meme dans chaque aspect aussi minime soit t'il su projet.",
+    "description": "Conception et gestion complète d'un site web institutionnel visant à promouvoir notre filière. Ce projet démontre une maîtrise de la création, du développement et de la maintenance autonome de contenus numériques.",
     "tags" : ["React" , "Tailwindcss"],
     "auteur" : "Sr",
     "preview" : "./2.webp",
