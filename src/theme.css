@@ -6,7 +6,9 @@ html {scroll-behavior: smooth;}
 @import "tailwindcss";
 
 @theme {
-  --color-bg:        #05070f;
+  --font-display:    "DM Serif Display", Georgia, serif;
+
+  --color-bg:       #05070f;
   --color-bg2:       #080c18;
   --color-bg3:       #0b1020;
   --color-navy:      #0d1530;

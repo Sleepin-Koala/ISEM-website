@@ -1,7 +1,4 @@
 import Neural from "./Neural.jsx"
-import { useTheme } from "../components/hooks/useTheme.jsx"
-
-
 
 export default function Hero({currentTheme}) {
 
@@ -14,9 +11,9 @@ export default function Hero({currentTheme}) {
 
       <div className="pt-20">
         <div className="hero-left">
-          <h1 className="text-white mb-[1.8rem] text-5xl">
+          <h1 className="font-display font-normal text-white mb-[1.8rem] text-5xl leading-[1.05]">
             Comprendre le monde
-            <p className="text-cyan-400">par les modèles.</p>
+            <span className="block italic text-cyan">par les modèles.</span>
           </h1>
 
           <p className="text-off max-w-120 mb-12">

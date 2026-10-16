@@ -14,11 +14,11 @@ export default function Contact() {
           <div className="contact-methods">
             <a href="mailto:contact@isem.edu" className="contact-method">
               <FaMailBulk />
-              <div><div className="method-label">Email</div><div className="method-val">contact@isem.edu</div></div>
+              <div><div className="method-label">Email</div><div className="method-val">appiadesire6@gmail.com</div></div>
             </a>
-            <a href="tel:+2250000000000" className="contact-method">
+            <a href="tel:+2250140029057" className="contact-method">
               <FaPhone className="method-icon" />
-              <div><div className="method-label">Téléphone</div><div className="method-val">+225 00 00 00 00</div></div>
+              <div><div className="method-label">Téléphone</div><div className="method-val">+225 01 40 02 90 57</div></div>
             </a>
             <a href="#" className="contact-method">
               <FaLocationArrow className="method-icon" />

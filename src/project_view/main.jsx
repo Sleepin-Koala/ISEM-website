@@ -1,6 +1,6 @@
-import Card from "../components/ui/card"
+import Card from "../shared/card";
 import P from "../assets/projects.json"
-import Nav from "../components/ui/Nav";
+import Nav from "../shared/Nav";
 
 export default function Projects() {
 

@@ -1,16 +1,28 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Showcase from "./showcase/main"
 import Projects from "./project_view/main"
+import { useTheme } from "./shared/hooks/useTheme";
 
-export default function App(){
-  
+
+export default function App() {
+  const { currentTheme, changeTheme } = useTheme()
+
+
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element = {<Showcase/>}/>
-          <Route path="/projects" element = {<Projects/>}/>
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Showcase theme={currentTheme} changeTheme={changeTheme} />
+          } />
+
+        <Route
+          path="/projects"
+          element={<Projects />}
+        />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
