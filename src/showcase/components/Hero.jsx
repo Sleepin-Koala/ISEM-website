@@ -1,13 +1,15 @@
-import Neural from "./Neural.jsx"
+import NetworkBackground from "./NetworkBackground.jsx"
 
 export default function Hero({currentTheme}) {
 
   return (
-    <section className="ground flex items-center p-16 min-h-screen">
+    <section className="ground relative isolate overflow-hidden flex items-center px-5 md:px-10 lg:px-16 py-16 min-h-screen">
 
-      <div className={`inset-0 absolute pointer-events-none ${currentTheme == "light" ? "invert-300 opacity-20" : "opacity-10"}`} aria-hidden="true">
+      <div className={`inset-0 absolute -z-20 pointer-events-none ${currentTheme == "light" ? "invert-300 opacity-20" : "opacity-10"}`} aria-hidden="true">
         <img src="/bg2.png" alt="" className="w-full h-full object-cover" />
       </div>
+
+      <NetworkBackground theme={currentTheme} />
 
       <div className="relative pt-20">
         <div className="hero-left">
@@ -28,12 +30,10 @@ export default function Hero({currentTheme}) {
         </div>
       </div>
 
-      <div className="absolute hidden md:flex flex-col items-center gap-2 opacity-40  bottom-3 left-1/2">
+      <div className="absolute hidden md:flex flex-col items-center gap-2 opacity-40 bottom-3 left-1/2 -translate-x-1/2 pointer-events-none" aria-hidden="true">
         <span className="uppercase text-amber tracking-widest text-xs">Explorer</span>
-        <div className="scroll-line w-px h-14 animate-bounce"></div>
+        <div className="scroll-line w-px h-14 motion-safe:animate-bounce"></div>
       </div>
-
-      <Neural theme={currentTheme}/>
 
     </section>
   )

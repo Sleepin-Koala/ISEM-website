@@ -8,7 +8,7 @@
     "tags": ["React", "Tauri", "Rust", "Tailwind CSS"],
     "auteur": "Sr",
     "featured": true,
-    "preview": "/1.webp",
+    "preview": "/img/projects/industry-simulator/cover.webp",
     "link": "https://github.com/Sleepin-Koala/IsemIndustry"
 },
 {
@@ -19,7 +19,7 @@
     "description": "Réseau de neurones artificiels écrit sans framework de deep learning : couches, rétropropagation et descente de gradient implémentées à la main avec NumPy.",
     "tags": ["Python", "NumPy", "Machine Learning"],
     "auteur": "Sr",
-    "preview": "/3.webp",
+    "preview": "/img/projects/artificial-neural-network/cover.webp",
     "previewFit": "contain",
     "link": "https://github.com/Sleepin-Koala/ANN"
 },
@@ -31,7 +31,7 @@
     "description": "Le site que vous consultez : conçu, développé et maintenu par les étudiants pour présenter le programme et leurs projets.",
     "tags": ["React", "Tailwind CSS"],
     "auteur": "Sr",
-    "preview": "/2.webp",
+    "preview": "/img/projects/site-isem/cover.webp",
     "link": "https://github.com/Sleepin-Koala/ISEM-website/"
 }
 ]
