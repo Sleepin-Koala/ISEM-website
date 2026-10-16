@@ -73,11 +73,11 @@ export default function Skills() {
             <div className="max-w-7xl mx-auto">
                 <div className="section-label">Spécialisations</div>
                 <h2 id="skills-title" className="section-title">
-                    Deux voies d'<em>excellence</em>
+                    Un tronc commun, deux <em>spécialisations</em>
                 </h2>
                 <p className="section-body">
-                    Après les fondations communes, chaque étudiant approfondit une spécialisation.
-                    Un tronc scientifique partagé. Une expertise distincte.
+                    Les étudiants suivent d'abord un socle scientifique commun, puis choisissent une spécialisation :
+                    IA & Data Science, ou Actuariat & Finance.
                 </p>
 
                 <div role="tablist" aria-label="Parcours" className="flex flex-wrap mt-10 border-b border-border">

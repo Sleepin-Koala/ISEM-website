@@ -1,20 +1,23 @@
 import { TbMathFunction, TbTopologyStar3, TbFlask, TbArrowsJoin, TbWorld, TbBinaryTree2 } from "react-icons/tb";
 
 const items = [
-    { icon: TbMathFunction, title: "Rigueur mathématique", desc: "Chaque concept est formalisé, prouvé, compris. Pas de boîtes noires. Un ingénieur ISEM sait pourquoi ça marche." },
-    { icon: TbTopologyStar3, title: "Pensée systémique", desc: "Modéliser un phénomène, c'est d'abord comprendre ses interactions. ISEM enseigne à voir les systèmes dans leur globalité." },
-    { icon: TbFlask, title: "Science appliquée", desc: "Finance, assurance, IA, simulation : les compétences ISEM s'appliquent aux défis quantitatifs les plus exigeants." },
-    { icon: TbArrowsJoin, title: "Interdisciplinarité", desc: "Mathématiques, informatique, économie, physique — les vrais problèmes ne respectent pas les frontières disciplinaires." },
-    { icon: TbWorld, title: "Excellence africaine", desc: "Former les ingénieurs scientifiques qui bâtiront les infrastructures analytiques du continent et rayonneront à l'international." },
-    { icon: TbBinaryTree2, title: "Profondeur algorithmique", desc: "Au-delà des frameworks : comprendre les fondements, implémenter depuis zéro, innover au niveau de l'algorithme." },
+    { icon: TbMathFunction, title: "Rigueur mathématique", desc: "Chaque concept est formalisé et démontré avant d'être appliqué. L'objectif : comprendre pourquoi une méthode fonctionne, pas seulement savoir l'utiliser." },
+    { icon: TbTopologyStar3, title: "Pensée systémique", desc: "Modéliser un phénomène, c'est d'abord comprendre ses interactions. On apprend à regarder un système dans sa globalité." },
+    { icon: TbFlask, title: "Science appliquée", desc: "Finance, assurance, IA, simulation : les enseignements sont tournés vers des problèmes quantitatifs réels." },
+    { icon: TbArrowsJoin, title: "Interdisciplinarité", desc: "Mathématiques, informatique, économie, physique : les vrais problèmes ne respectent pas les frontières disciplinaires." },
+    { icon: TbWorld, title: "Ancrage africain", desc: "Former à Yamoussoukro des ingénieurs capables de répondre aux besoins analytiques de la Côte d'Ivoire et du continent." },
+    { icon: TbBinaryTree2, title: "Profondeur algorithmique", desc: "Au-delà des frameworks : comprendre les fondements et implémenter depuis zéro, comme notre réseau de neurones écrit sans bibliothèque de deep learning." },
 ];
 
 export default function Why() {
     return (
         <section className="bg-bg2 p-5 md:p-10" id="foundations" aria-labelledby="foundations-title">
             <div className="max-w-7xl mx-auto">
-                <div className="section-label">Pourquoi ISEM</div>
+                <div className="section-label">Notre approche</div>
                 <h2 id="foundations-title" className="section-title">Ingénierie de la complexité</h2>
+                <p className="section-body">
+                    Une formation jeune, qui compte aujourd'hui trois promotions, construite autour de six principes.
+                </p>
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px mt-10 bg-border border border-border">
                     {items.map(({ icon: Icon, title, desc }) => (

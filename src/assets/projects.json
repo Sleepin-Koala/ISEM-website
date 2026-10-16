@@ -1,28 +1,37 @@
-
-
-[{
-    "title" : "Industry Simulator",
-    "description": "Nous avons conçu un logiciel de simulation industrielle intégré, capable d'agréger et de modéliser simultanément divers systèmes industriels complexes (comme les centrales hydroélectriques). Ce système unique offre une flexibilité totale, permettant un basculement immédiat entre différents scénarios pour une analyse réaliste.",
-    "tags" : ["React" , "Tauri", "Rust" , "Tailwindcss"],
-    "auteur" : "Sr",
-    "preview" : "./1.webp",
-    "link" : "https://github.com/Sleepin-Koala/IsemIndustry"
+[
+{
+    "slug": "industry-simulator",
+    "title": "Industry Simulator",
+    "domain": "Modélisation & simulation",
+    "problem": "Comment analyser plusieurs systèmes industriels complexes, comme une centrale hydroélectrique, dans un seul outil ?",
+    "description": "Logiciel de bureau qui modélise simultanément plusieurs systèmes industriels et permet de basculer instantanément d'un scénario à l'autre pour comparer leurs comportements.",
+    "tags": ["React", "Tauri", "Rust", "Tailwind CSS"],
+    "auteur": "Sr",
+    "featured": true,
+    "preview": "/1.webp",
+    "link": "https://github.com/Sleepin-Koala/IsemIndustry"
 },
 {
-    "title" : "Ce Site Web",
-    "description": "Conception et gestion complète d'un site web institutionnel visant à promouvoir notre filière. Ce projet démontre une maîtrise de la création, du développement et de la maintenance autonome de contenus numériques.",
-    "tags" : ["React" , "Tailwindcss"],
-    "auteur" : "Sr",
-    "preview" : "./2.webp",
-    "link" : "https://github.com/Sleepin-Koala/ISEM-website/"
+    "slug": "artificial-neural-network",
+    "title": "Réseau de neurones from scratch",
+    "domain": "IA & Data Science",
+    "problem": "Que se passe-t-il vraiment à l'intérieur d'un réseau de neurones ?",
+    "description": "Réseau de neurones artificiels écrit sans framework de deep learning : couches, rétropropagation et descente de gradient implémentées à la main avec NumPy.",
+    "tags": ["Python", "NumPy", "Machine Learning"],
+    "auteur": "Sr",
+    "preview": "/3.webp",
+    "previewFit": "contain",
+    "link": "https://github.com/Sleepin-Koala/ANN"
 },
 {
-    "title" : "Artificial Neural Network",
-    "description": "Développement from scratch d'un réseau de neurones artificiels (ANN). Ce projet illustre les fondements du Machine Learning à travers l'implémentation algorithmique de la rétropropagation, de la descente de gradient et de couches sur mesure, démontrant une maîtrise technique des architectures d'intelligence artificielle.",
-    "tags" : ["Python", "NumPy", "Machine Learning"],
-    "auteur" : "Sr",
-    "preview" : "./3.webp",
-    "link" : "https://github.com/Sleepin-Koala/ANN"
+    "slug": "site-isem",
+    "title": "Site web de la filière",
+    "domain": "Développement web",
+    "problem": "Comment faire connaître une jeune filière et montrer ce que ses étudiants réalisent ?",
+    "description": "Le site que vous consultez : conçu, développé et maintenu par les étudiants pour présenter le programme et leurs projets.",
+    "tags": ["React", "Tailwind CSS"],
+    "auteur": "Sr",
+    "preview": "/2.webp",
+    "link": "https://github.com/Sleepin-Koala/ISEM-website/"
 }
-
 ]

@@ -14,8 +14,9 @@ export default function Footer(){
       <p>© 2026 ISEM — Yamoussoukro, Côte d'Ivoire</p>
     </div>
     <div className="flex footer-links flex-1 gap-5">
-      <a href="#">Programme</a>
-      <a href="#">Contact</a>
+      <a href="#projets">Projets</a>
+      <a href="#foundations">Programme</a>
+      <a href="#contact">Contact</a>
     </div>
   </footer>
   )

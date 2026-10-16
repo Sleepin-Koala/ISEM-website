@@ -5,11 +5,11 @@ export default function Hero({currentTheme}) {
   return (
     <section className="ground flex items-center p-16 min-h-screen">
 
-      <div className={`inset-0 absolute  ${currentTheme == "light" ? "invert-300 opacity-20" : "opacity-10"}`}>
-        <img src="./bg2.png"  style={{width: "100%" , height: "100%"}}/>
+      <div className={`inset-0 absolute pointer-events-none ${currentTheme == "light" ? "invert-300 opacity-20" : "opacity-10"}`} aria-hidden="true">
+        <img src="/bg2.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div className="pt-20">
+      <div className="relative pt-20">
         <div className="hero-left">
           <h1 className="font-display font-normal text-white mb-[1.8rem] text-5xl leading-[1.05]">
             Comprendre le monde
@@ -17,12 +17,13 @@ export default function Hero({currentTheme}) {
           </h1>
 
           <p className="text-off max-w-120 mb-12">
-            ISEM forme une nouvelle génération d'ingénieurs scientifiques — mathématiciens, modélisateurs, architectes de données — capables de raisonner avec rigueur sur les systèmes complexes du monde réel.
+            ISEM est une jeune filière d'ingénierie en sciences exactes et modélisation, à Yamoussoukro.
+            Trois promotions y apprennent à raisonner avec rigueur sur des systèmes complexes, et le montrent par des projets concrets.
           </p>
 
           <div className="flex gap-2 flex-wrap">
-            <a href="#foundations" className="uppercase transition-all relative font-bold px-2 py-3 bg-amber">Découvrir le programme</a>
-            <a href="#skills" className="px-2 py-3 font-semibold uppercase transition-all border border-[rgba(240,242,245,0.2)] text-white tracking-widest bg-transparent hover:border-cyan-600 hover:text-cyan-600">Explorer les spécialisations</a>
+            <a href="#projets" className="relative px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] bg-amber text-bg transition duration-200 hover:brightness-110">Voir les projets</a>
+            <a href="#foundations" className="relative px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] border border-border text-white transition-colors duration-200 hover:border-cyan hover:text-cyan">Découvrir le programme</a>
           </div>
         </div>
       </div>
