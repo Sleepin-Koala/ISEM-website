@@ -1,37 +1,150 @@
 [
-{
-    "slug": "industry-simulator",
-    "title": "Industry Simulator",
-    "domain": "Modélisation & simulation",
-    "problem": "Comment analyser plusieurs systèmes industriels complexes, comme une centrale hydroélectrique, dans un seul outil ?",
-    "description": "Logiciel de bureau qui modélise simultanément plusieurs systèmes industriels et permet de basculer instantanément d'un scénario à l'autre pour comparer leurs comportements.",
-    "tags": ["React", "Tauri", "Rust", "Tailwind CSS"],
-    "auteur": "Sr",
-    "featured": true,
-    "preview": "/img/projects/industry-simulator/cover.webp",
-    "link": "https://github.com/Sleepin-Koala/IsemIndustry"
-},
-{
-    "slug": "artificial-neural-network",
-    "title": "Réseau de neurones from scratch",
-    "domain": "IA & Data Science",
-    "problem": "Que se passe-t-il vraiment à l'intérieur d'un réseau de neurones ?",
-    "description": "Réseau de neurones artificiels écrit sans framework de deep learning : couches, rétropropagation et descente de gradient implémentées à la main avec NumPy.",
-    "tags": ["Python", "NumPy", "Machine Learning"],
-    "auteur": "Sr",
-    "preview": "/img/projects/artificial-neural-network/cover.webp",
-    "previewFit": "contain",
-    "link": "https://github.com/Sleepin-Koala/ANN"
-},
-{
-    "slug": "site-isem",
-    "title": "Site web de la filière",
-    "domain": "Développement web",
-    "problem": "Comment faire connaître une jeune filière et montrer ce que ses étudiants réalisent ?",
-    "description": "Le site que vous consultez : conçu, développé et maintenu par les étudiants pour présenter le programme et leurs projets.",
-    "tags": ["React", "Tailwind CSS"],
-    "auteur": "Sr",
-    "preview": "/img/projects/site-isem/cover.webp",
-    "link": "https://github.com/Sleepin-Koala/ISEM-website/"
-}
+    {
+        "slug": "industry-simulator",
+        "title": "Industry Simulator",
+        "domain": "Modélisation & simulation",
+        "promotion": "2e promotion",
+        "problem": "Comment analyser plusieurs systèmes industriels complexes, comme une centrale hydroélectrique, dans un seul outil ?",
+        "description": "Logiciel de bureau qui modélise simultanément plusieurs systèmes industriels et permet de basculer instantanément d'un scénario à l'autre pour comparer leurs comportements.",
+        "details": [
+            "Le portail réunit six systèmes de supervision (SCADA) conçus par des binômes d'étudiants. Chacun modélise une installation réelle : production, régulation, alarmes et indicateurs en temps réel.",
+            "L'application de bureau, construite avec Tauri et Rust, permet de passer d'une installation à l'autre sans quitter l'outil."
+        ],
+        "modules": [
+            {
+                "name": "Installation photovoltaïque",
+                "desc": "Production solaire en temps réel, onduleurs et optimisation énergétique.",
+                "authors": "Aka & Yatte"
+            },
+            {
+                "name": "Centrale de climatisation à eau glacée",
+                "desc": "Groupes frigorifiques, régulation de température et flux d'eau glacée.",
+                "authors": "Guehi Gnantin & Kobenan JD"
+            },
+            {
+                "name": "Centrale hydroélectrique",
+                "desc": "Turbines, débits et niveaux, sécurité du barrage.",
+                "authors": "Srankpa & Bosson"
+            },
+            {
+                "name": "Centrale à turbine à gaz et cycle combiné",
+                "desc": "Pilotage des turbines, analyse des performances et des émissions.",
+                "authors": "[Nom 1] & [Nom 2]"
+            },
+            {
+                "name": "Centrale éolienne",
+                "desc": "Aérogénérateurs, orientation des pales et prévision de production.",
+                "authors": "[Nom 1] & [Nom 2]"
+            },
+            {
+                "name": "Centrale thermique à vapeur",
+                "desc": "Modélisation physique et thermodynamique du cycle de Rankine.",
+                "authors": "[Nom 1] & [Nom 2]"
+            }
+        ],
+        "tags": [
+            "React",
+            "Tauri",
+            "Rust",
+            "Tailwind CSS"
+        ],
+        "auteur": "Sr",
+        "featured": true,
+        "preview": "/img/projects/industry-simulator/cover.webp",
+        "gallery": [
+            {
+                "src": "/img/projects/industry-simulator/first-page_light.webp",
+                "caption": "Le portail : six systèmes de supervision réalisés par les étudiants de la 2e promotion.",
+                "span": "full"
+            },
+            {
+                "src": "/img/projects/industry-simulator/some_project_screenshot_light.webp",
+                "caption": "SCADA-PV : synoptique d'une installation photovoltaïque, du panneau à l'onduleur, avec batterie de stockage."
+            },
+            {
+                "src": "/img/projects/industry-simulator/some_project_screenshot_2_light.webp",
+                "caption": "WindSCADA : parc de cinq éoliennes, indicateurs en temps réel et stockage par batteries."
+            },
+            {
+                "src": "/img/projects/industry-simulator/some_project_data_screenshot_light.webp",
+                "caption": "SCADA Hydro : caractéristiques électriques et stabilité de la fréquence autour de 50 Hz.",
+                "span": "full"
+            }
+        ],
+        "link": "https://github.com/Sleepin-Koala/IsemIndustry"
+    },
+    {
+        "slug": "artificial-neural-network",
+        "title": "Réseau de neurones from scratch",
+        "domain": "IA & Data Science",
+        "promotion": "[Xe promotion]",
+        "problem": "Que se passe-t-il vraiment à l'intérieur d'un réseau de neurones ?",
+        "description": "Réseau de neurones artificiels écrit sans framework de deep learning : couches, rétropropagation et descente de gradient implémentées à la main avec NumPy.",
+        "details": [
+            "Chaque brique est écrite à la main : initialisation des poids, propagation avant, rétropropagation et descente de gradient par mini-lots.",
+            "Le réseau est entraîné sur des chiffres manuscrits (MNIST). Une interface permet de dessiner un chiffre et d'obtenir la prédiction du modèle avec son niveau de confiance."
+        ],
+        "tags": [
+            "Python",
+            "NumPy",
+            "Machine Learning"
+        ],
+        "auteur": "Sr",
+        "preview": "/img/projects/artificial-neural-network/cover.webp",
+        "previewFit": "contain",
+        "gallery": [
+            {
+                "src": "/img/projects/artificial-neural-network/deux.png",
+                "caption": "Un 2 dessiné à la main, reconnu avec 99,6 % de confiance."
+            },
+            {
+                "src": "/img/projects/artificial-neural-network/zero.png",
+                "caption": "Un 0 reconnu avec 90,1 % de confiance."
+            },
+            {
+                "src": "/img/projects/artificial-neural-network/quatre_2.png",
+                "caption": "Un 4 reconnu avec 99,9 % de confiance."
+            },
+            {
+                "src": "/img/projects/artificial-neural-network/quatre.png",
+                "caption": "Une erreur instructive : ce 4 tracé autrement est lu comme un 1, avec 71,7 % de confiance."
+            },
+            {
+                "src": "/img/projects/artificial-neural-network/carbon_light.webp",
+                "caption": "Extrait du code : initialisation des poids et propagation avant, sans bibliothèque de deep learning.",
+                "span": "full"
+            }
+        ],
+        "link": "https://github.com/Sleepin-Koala/ANN"
+    },
+    {
+        "slug": "site-isem",
+        "title": "Site web de la filière",
+        "domain": "Développement web",
+        "promotion": "[Xe promotion]",
+        "problem": "Comment faire connaître une jeune filière et montrer ce que ses étudiants réalisent ?",
+        "description": "Le site que vous consultez : conçu, développé et maintenu par les étudiants pour présenter le programme et leurs projets.",
+        "details": [
+            "Le site présente le programme, les spécialisations et les projets des étudiants. Il propose un thème clair et sombre et reste utilisable au clavier."
+        ],
+        "tags": [
+            "React",
+            "Tailwind CSS"
+        ],
+        "auteur": "Sr",
+        "preview": "/img/projects/site-isem/cover.webp",
+        "gallery": [
+            {
+                "src": "/img/projects/site-isem/skills-grid.png",
+                "caption": "La grille des spécialisations, avec ses onglets par parcours.",
+                "span": "full"
+            },
+            {
+                "src": "/img/projects/site-isem/code-snippet_light.webp",
+                "caption": "Extrait du code : des onglets accessibles au clavier, selon le modèle ARIA.",
+                "span": "full"
+            }
+        ],
+        "link": "https://github.com/Sleepin-Koala/ISEM-website/"
+    }
 ]
