@@ -21,7 +21,6 @@ function buildOptions(theme) {
         pauseOnOutsideViewport: true,
         particles: {
             number: { value: small ? 40 : 90, density: { enable: true } },
-            // v4 : la couleur des particules passe par paint.fill (et non plus particles.color)
             paint: { fill: { enable: true, color: { value: accent }, opacity: { min: 0.5, max: 1 } } },
             shape: { type: "circle" },
             size: { value: { min: 1.5, max: 3 } },
@@ -55,7 +54,6 @@ function buildOptions(theme) {
 }
 
 export default function NetworkBackground({ theme }) {
-    // Options mémorisées : un nouvel objet à chaque rendu relancerait l'animation
     const options = useMemo(() => buildOptions(theme), [theme]);
 
     return (

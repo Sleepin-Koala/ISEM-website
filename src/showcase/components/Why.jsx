@@ -5,7 +5,6 @@ const items = [
     { icon: TbTopologyStar3, title: "Pensée systémique", desc: "Modéliser un phénomène, c'est d'abord comprendre ses interactions. On apprend à regarder un système dans sa globalité." },
     { icon: TbFlask, title: "Science appliquée", desc: "Finance, assurance, IA, simulation : les enseignements sont tournés vers des problèmes quantitatifs réels." },
     { icon: TbArrowsJoin, title: "Interdisciplinarité", desc: "Mathématiques, informatique, économie, physique : les vrais problèmes ne respectent pas les frontières disciplinaires." },
-    { icon: TbWorld, title: "Ancrage africain", desc: "Former à Yamoussoukro des ingénieurs capables de répondre aux besoins analytiques de la Côte d'Ivoire et du continent." },
     { icon: TbBinaryTree2, title: "Profondeur algorithmique", desc: "Au-delà des frameworks : comprendre les fondements et implémenter depuis zéro, comme notre réseau de neurones écrit sans bibliothèque de deep learning." },
 ];
 
