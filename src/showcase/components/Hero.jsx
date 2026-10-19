@@ -6,7 +6,7 @@ export default function Hero({currentTheme}) {
     <section className="ground relative isolate overflow-hidden flex items-center px-5 md:px-10 lg:px-16 py-16 min-h-screen">
 
       <div className={`inset-0 absolute -z-20 pointer-events-none ${currentTheme == "light" ? "invert-300 opacity-20" : "opacity-10"}`} aria-hidden="true">
-        <img src="/bg2.png" alt="" className="w-full h-full object-cover" />
+        <img src="/bg2.webp" alt="" className="w-full h-full object-cover" />
       </div>
 
       <NetworkBackground theme={currentTheme} />

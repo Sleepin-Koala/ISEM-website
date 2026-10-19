@@ -3,7 +3,7 @@
         "slug": "industry-simulator",
         "title": "Industry Simulator",
         "domain": "Modélisation & simulation",
-        "promotion": "2e promotion",
+        "promotion": "[2e promotion]",
         "problem": "Comment analyser plusieurs systèmes industriels complexes, comme une centrale hydroélectrique, dans un seul outil ?",
         "description": "Logiciel de bureau qui modélise simultanément plusieurs systèmes industriels et permet de basculer instantanément d'un scénario à l'autre pour comparer leurs comportements.",
         "details": [
@@ -77,7 +77,7 @@
         "slug": "artificial-neural-network",
         "title": "Réseau de neurones from scratch",
         "domain": "IA & Data Science",
-        "promotion": "[Xe promotion]",
+        "promotion": "[2e Promotion]",
         "problem": "Que se passe-t-il vraiment à l'intérieur d'un réseau de neurones ?",
         "description": "Réseau de neurones artificiels écrit sans framework de deep learning : couches, rétropropagation et descente de gradient implémentées à la main avec NumPy.",
         "details": [
@@ -121,8 +121,8 @@
         "slug": "site-isem",
         "title": "Site web de la filière",
         "domain": "Développement web",
-        "promotion": "[Xe promotion]",
-        "problem": "Comment faire connaître une jeune filière et montrer ce que ses étudiants réalisent ?",
+        "promotion": "[2e Promotion]",
+        "problem": "Le code source de ce site",
         "description": "Le site que vous consultez : conçu, développé et maintenu par les étudiants pour présenter le programme et leurs projets.",
         "details": [
             "Le site présente le programme, les spécialisations et les projets des étudiants. Il propose un thème clair et sombre et reste utilisable au clavier."
